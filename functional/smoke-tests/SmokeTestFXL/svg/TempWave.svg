@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
 
 <!-- Generator: LiveMotion 1.0x64 on DevBranch - SVG Library: 1.0x73 on MainBranch -->
-<svg   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="800" height="600" viewBox="0 0 800 600" 
+<svg   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="576" height="1024" viewBox="0 0 800 600" 
 		preserveAspectRatio="xMinYMin" xml:space="preserve" onload="on_load(evt)" style="overflow:visible" >
 
 	<script type="text/javascript" xlink:href="../scripts/TempWave.js" />
 
 	<!-- animate id="Deefd00" xlink:href="#Ceefd00" attributeName="x"  dur="0s" from="0" to="0"/ -->
 	<defs>
-		<rect id="Beefd00" width="800" height="600"/> 
+		<rect id="Beefd00" width="600" height="800"/> 
 	</defs>
 	<use xlink:href="#Beefd00"  id="Ueefd00" />
 
+	<g transform="rotate(-90) translate(-800 0)">
+	
 	<g id="PG_Profile" transform="matrix(5.0 0 0 25.0 162 76)">
 		<polyline id="P_Profile" style="fill:none;stroke-width:0.5;stroke:#FF0000;" stroke-linecap="butt" points="0,0 0,0" />
 	</g>
@@ -404,5 +406,7 @@
 	<g id="restartbutton" transform="matrix(1 0 0 1 639 236)" onmousedown="OnRestartButton(evt)">
 		<rect width="55" height="31" rx="4" style="fill:magenta;stroke:black" />
 		<text  transform="matrix(1 0 0 1 27.5 15.5)" style="font-family:'Verdana'; font-size:12;fill:black;dominant-baseline:central;" text-anchor="middle">Restart</text>
+	</g>
+	
 	</g>	
 </svg>

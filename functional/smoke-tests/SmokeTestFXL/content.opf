@@ -51,7 +51,6 @@
   	<item id="nav" href="xhtml/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
   	<item id="titlepage" href="xhtml/titlepage.xhtml" media-type="application/xhtml+xml"/>
    	<!--  CSS -->
-  	<item id="css" href="css/style.css" media-type="text/css"/>
   	<item id="fixed-css" href="css/fixed.css" media-type="text/css"/>
  	<item id="base-css" href="css/base.css" media-type="text/css"/>
  	<item id="svg-css" href="css/svg.css" media-type="text/css"/>
@@ -98,7 +97,7 @@
   	<item id="multimedia-06" href="xhtml/multimedia-006.xhtml" media-type="application/xhtml+xml"/>
   	<item id="multimedia-07" href="xhtml/multimedia-007.xhtml" media-type="application/xhtml+xml"/>
  	<item id="multimedia-08" href="xhtml/multimedia-008.xhtml" media-type="application/xhtml+xml"/>
-   	<item id="multimedia-09" href="xhtml/multimedia-000.xhtml" media-type="application/xhtml+xml"/>
+   	<item id="multimedia-09" href="xhtml/multimedia-009.xhtml" media-type="application/xhtml+xml"/>
  	<!--  Chapter 3 Images in the Spine --> 
 	<item id="spine-images-001" href="xhtml/spine-images-001.xhtml"  media-type="application/xhtml+xml"/>
   	<item id="jpeg-spine-fallback" href="xhtml/jpeg-spine-fallback.xhtml" media-type="application/xhtml+xml"/>
