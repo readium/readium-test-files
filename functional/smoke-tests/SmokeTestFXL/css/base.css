@@ -1,6 +1,9 @@
 @charset "utf-8";
 
-h1 { color: rgb(0,90,156); }
+h1 { 
+	color: rgb(0,90,156); 
+	font-variant:small-caps;
+}
 h2 { font-size: 140%; }
 h3 { font-size: 130%; }
 h4 { font-size: 120%; }
