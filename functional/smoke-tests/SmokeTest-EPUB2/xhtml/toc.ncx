@@ -1,0 +1,25 @@
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+	<head>
+	  <meta name="dtb:uid" content="org.readium.smoketest.epub2" />
+      <meta name="dtb:depth" content="1" />
+      <meta name="dtb:totalPageCount" content="2" />
+      <meta name="dtb:maxPageNumber" content="2" />
+	</head>
+   <docTitle>
+      <text>Smoke Test - EPUB 2</text>
+   </docTitle>
+	<navMap>
+		<navPoint id="chapter01">
+			<navLabel>
+				<text>1. King Solomon's Mines</text>
+			</navLabel>
+			<content src="chapter01.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter02">
+			<navLabel>
+				<text>2. The Marvellous Land of Oz</text>
+			</navLabel>
+			<content src="chapter02.xhtml"/>
+		</navPoint>
+	</navMap>
+</ncx>

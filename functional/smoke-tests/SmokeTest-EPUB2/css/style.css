@@ -1,0 +1,19 @@
+body {
+    font-family: 'Schoolbook-Reg', georgia, serif;  
+}
+
+/* otf: OpenType fonts with TrueType outlines*/
+@font-face {
+    font-family: 'Schoolbook-Reg';
+    font-weight: normal;
+    font-style: normal;
+    src:url(../fonts/texgyreschola-regular.otf) format('opentype');
+}
+
+/* otf: OpenType fonts with TrueType outlines*/
+@font-face {
+    font-family: 'Schoolbook-Italic';
+    font-weight: normal;
+    font-style: italic;
+    src:url(../fonts/texgyreschola-italic.otf) format('opentype');
+}

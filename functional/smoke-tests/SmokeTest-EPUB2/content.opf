@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" unique-identifier="pubid">
+ <metadata>
+   <dc:title>SmokeTest - EPUB 2</dc:title> 
+   <dc:creator>Ric Wright</dc:creator> 
+   <dc:date xmlns:opf="http://www.idpf.org/2007/opf" opf:event="creation">2014-02-27</dc:date>
+   <dc:subject>testfile</dc:subject> 
+   <dc:language>en</dc:language> 
+   <dc:identifier id="pubid">org.readium.smoketest.epub2</dc:identifier>
+   <meta name="cover" content="cover-image"/>
+ </metadata>
+ <manifest>
+  <!-- fonts -->
+  <item id="Schoolbook-Reg" href="fonts/texgyreschola-regular.otf" media-type="application/font-otf"/>
+  <item id="Schoolbook-Italic" href="fonts/texgyreschola-italic.otf" media-type="application/font-otf"/>
+  <!--  images -->
+  <item id="epub_logo" href="images/epub_logo.png" media-type="image/png" />
+  <!--  front matter -->
+  <item id="ncx" href="xhtml/toc.ncx" media-type="application/x-dtbncx+xml" />
+  <item id="titlepage" href="xhtml/titlepage.xhtml" media-type="application/xhtml+xml"/>
+  <!--  chapters -->
+  <item id="chapter01" href="xhtml/chapter01.xhtml" media-type="application/xhtml+xml"/>
+  <item id="chapter02" href="xhtml/chapter02.xhtml" media-type="application/xhtml+xml"/>
+  <item id="css" href="css/style.css" media-type="text/css"/>
+ </manifest>
+ <spine toc="ncx">
+  <itemref idref="titlepage"/>
+  <itemref idref="chapter01"/>
+  <itemref idref="chapter02"/>
+ </spine>
+ <!--  this is for iBooks, Readium ignores it -->
+ <guide>
+ 	<reference type="cover" href="xhtml/titlepage.xhtml" />
+ </guide>
+</package>
