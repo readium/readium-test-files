@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="pub-id" 
+	prefix="cc: http://creativecommons.org/ns# rendition: http://www.idpf.org/vocab/rendition/#">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title id="title">SmokeTest-Reflow</dc:title>
+    <meta refines="#title" property="title-type">main</meta>
+    <dc:creator id="creator">Readium Contributors</dc:creator>
+    <meta refines="#creator" property="file-as">MELVILLE, HERMAN</meta>
+    <meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
+    <dc:identifier id="pub-id">code.google.com.epub-samples.moby-dick-OBF</dc:identifier>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2014-07-31T12:47:00Z</meta>
+    <dc:publisher>Harper &amp; Brothers, Publishers</dc:publisher>
+    <dc:contributor id="contrib1">Dave Cramer</dc:contributor>
+    <meta refines="#contrib1" property="role" scheme="marc:relators">mrk</meta>
+    <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license.</dc:rights>        
+    <link rel="cc:license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>
+    <meta property="cc:attributionURL">http://code.google.com/p/epub-samples/</meta>
+    <!-- layout -->
+	<meta property="rendition:layout">reflowable</meta>
+	<meta property="rendition:flow">auto</meta>    
+     <!--MEDIA OVERLAY METADATA-->
+    <meta property="media:duration" refines="#chapter_001_overlay">0:14:20.500</meta>
+    <meta property="media:duration">0:23:23.500</meta>
+    <meta property="media:narrator">Stuart Wills</meta>
+
+    <meta property="media:active-class">-epub-media-overlay-active</meta>
+  </metadata>
+  <manifest>
+  	<!-- fonts -->
+	<item id="Goudy-Modern.ttf" href="font/goudy-modern-mt-1361519310.ttf" media-type="application/vnd.ms-opentype" />
+  	<!-- images -->
+    <item id="cover-image" properties="cover-image" href="images/EPUB-Logo-Reflow.png" media-type="image/png"/>
+  	<!-- audio -->
+    <item id="chapter_001_audio" href="audio/mobydick_001_002_melville.mp4" media-type="audio/mp4"/>
+   	<!-- front matter -->
+   	<item id="toc" properties="nav" href="xhtml/toc.xhtml" media-type="application/xhtml+xml"/>
+    <item id="cover" href="xhtml/cover.xhtml" media-type="application/xhtml+xml"/>
+   	<!-- css -->
+   	<item id="style" href="css/stylesheet.css" media-type="text/css"/>
+  	<item id="fixed-css" href="css/fixed.css" media-type="text/css"/>
+ 	<item id="base-css" href="css/base.css" media-type="text/css"/>
+    	<!--  smil -->
+    <item id="chapter_001_overlay" href="smil/chapter_001_overlay.smil" media-type="application/smil+xml"/>
+    <!-- svg -->
+   	<item id="melville-signature" href="svg/melvillesignature.svg" media-type="image/svg+xml"/>
+    	<!-- xhtml -->
+    <item id="chapter_001" href="xhtml/chapter_001.xhtml" media-type="application/xhtml+xml" media-overlay="chapter_001_overlay"/>
+    <item id="chapter_002" href="xhtml/chapter_002.xhtml" media-type="application/xhtml+xml" media-overlay="chapter_001_overlay"/>
+    <item id="signature-fxl" href="xhtml/signature-fxl.xhtml" media-type="application/xhtml+xml"  properties="svg"/>
+   </manifest>
+  <spine>
+    <itemref idref="toc" linear="no"/>
+    <itemref idref="chapter_001"/>
+    <itemref idref="signature-fxl" properties="rendition:layout-pre-paginated"/>   
+    <itemref idref="chapter_002"/>
+  </spine>
+</package>
