@@ -13,7 +13,7 @@
    	<dc:coverage>The Ether</dc:coverage> 
    	<dc:rights>Public Domain</dc:rights> 
    	<dc:publisher>Readium</dc:publisher> 
-   	<dc:identifier id="pub-id">com.github.readium.smoketest.fxl</dc:identifier>
+   	<dc:identifier id="pub-id">urn:uuid:36d5078e-ff7d-468e-a5f3-f47c14b91f2f</dc:identifier>
    	<meta property="dcterms:modified">2014-07-15T12:47:00Z</meta>
    	<!--  layout metadata  -->
 	<meta property="rendition:layout">pre-paginated</meta>
@@ -36,9 +36,9 @@
 	<item href="images/check.png" id="img-007" media-type="image/png"/>
 	<item href="images/check.gif" id="img-008" media-type="image/gif"/>
 	<item href="images/check.jpg" id="img-009" media-type="image/jpeg"/>
-	<item href="images/EPUB-Logo-Page.jpg" id="EPUB-Logo-Page-JPEG" media-type="image/jpeg" fallback="jpeg-spine-fallback"/>
-	<item href="images/EPUB-Logo-Page.png" id="EPUB-Logo-Page-PNG" media-type="image/png" fallback="png-spine-fallback"/>
-	<item href="images/EPUB-Logo-Page.gif" id="EPUB-Logo-Page-GIF" media-type="image/gif" fallback="gif-spine-fallback"/>
+	<item href="images/Readium-Logo-Page.jpg" id="Readium-Logo-Page-JPEG" media-type="image/jpeg" fallback="jpeg-spine-fallback"/>
+	<item href="images/Readium-Logo-Page.png" id="Readium-Logo-Page-PNG" media-type="image/png" fallback="png-spine-fallback"/>
+	<item href="images/Readium-Logo-Page.gif" id="Readium-Logo-Page-GIF" media-type="image/gif" fallback="gif-spine-fallback"/>
 	<item href="images/cichons_diagram.png" id="img-011" media-type="image/png"/>
 	<item href="images/Maghreb1.png" id="img-012" media-type="image/png"/>
 	<item href="images/ElementaryMathExample.png" id="img-013" media-type="image/png"/>
@@ -70,15 +70,16 @@
     <item id="smil-10" href="mo/skippability.smil" media-type="application/smil+xml"/>
     <item id="smil-11" href="mo/escapability.smil" media-type="application/smil+xml"/>
 	<!-- fonts -->
-	<item id="font-woff" href="fonts/OldStandard-Regular.woff" media-type="application/font-woff"/>
-	<item id="font-otf" href="fonts/OldStandard-Regular.otf" media-type="application/vnd.ms-opentype"/>
-	<item id="font-ttf" href="fonts/OldStandard-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-	<item id="font-woff-obf" href="fonts/OldStandard-Regular.obf.woff" media-type="application/font-woff"/>
-	<item id="font-otf-obf" href="fonts/OldStandard-Regular.obf.otf" media-type="application/vnd.ms-opentype"/>
-	<item id="font-ttf-obf" href="fonts/OldStandard-Regular.obf.ttf" media-type="application/vnd.ms-opentype"/>
-	<item id="font-woff-adb" href="fonts/OldStandard-Regular.adb.woff" media-type="application/font-woff"/>
-	<item id="font-otf-adb" href="fonts/OldStandard-Regular.adb.otf" media-type="application/vnd.ms-opentype"/>
-	<item id="font-ttf-adb" href="fonts/OldStandard-Regular.adb.ttf" media-type="application/vnd.ms-opentype"/>
+	<item id="font-ttf" href="fonts/OldStandard-Regular.ttf" media-type="application/x-font-ttf"/>
+  	<item id="sandome-ttf" href="fonts/sandome.ttf" media-type="application/x-font-ttf"/>
+  	<item id="sandomw-ttf-adb" href="fonts/sandome.adb.ttf" media-type="application/x-font-ttf"/>
+	<item id="sandome-ttf-obf" href="fonts/sandome.obf.ttf" media-type="application/x-font-ttf"/>
+	<item id="zantroke" href="fonts/Zantroke.otf" media-type="application/vnd.ms-opentype"/>
+	<item id="zantroke-obf" href="fonts/Zantroke.obf.otf" media-type="application/vnd.ms-opentype"/>
+	<item id="zantroke-adb" href="fonts/Zantroke.adb.otf" media-type="application/vnd.ms-opentype"/>
+	<item id="rozel-cut-cut" href="fonts/cut-cut.woff" media-type="application/font-woff"/>
+	<item id="rozel-cut-cut-obf" href="fonts/cut-cut.obf.woff" media-type="application/font-woff"/>
+	<item id="rozel-cut-cut-adb" href="fonts/cut-cut.adb.woff" media-type="application/font-woff"/>
   	<!--  Chapter 1 XHTML --> 
   	<item id="xhtml-01" href="xhtml/xhtml-001.xhtml" media-type="application/xhtml+xml"/>
   	<item id="xhtml-02" href="xhtml/xhtml-002.xhtml" media-type="application/xhtml+xml"/>
@@ -178,14 +179,14 @@
  <spine>
   	<itemref idref="nav" linear="yes"/>
   	<itemref idref="titlepage"/>
-  	<itemref idref="xhtml-01"/>
+  	<itemref idref="xhtml-01" properties="page-spread-left"/>
   	<itemref idref="xhtml-02"/>
   	<itemref idref="xhtml-03"/>
   	<itemref idref="xhtml-04"/>
    	<itemref idref="xhtml-05"/>
    	<itemref idref="xhtml-06"/>
    	<itemref idref="xhtml-07"/>
-  	<itemref idref="multimedia-01"/>
+  	<itemref idref="multimedia-01" properties="page-spread-left"/>
   	<itemref idref="multimedia-02"/>
   	<itemref idref="multimedia-03"/>
   	<itemref idref="multimedia-04"/>
@@ -194,53 +195,53 @@
   	<itemref idref="multimedia-07"/>
   	<itemref idref="multimedia-08" />
   	<itemref idref="multimedia-09"/>
-   	<itemref idref="spine-images-001" />
+   	<itemref idref="spine-images-001" properties="page-spread-left"/>
   	<itemref idref="spine-images-002" />
   	<itemref idref="spine-images-003" />
-  	<itemref idref="EPUB-Logo-Page-JPEG" />
-  	<itemref idref="EPUB-Logo-Page-PNG" />
-  	<itemref idref="EPUB-Logo-Page-GIF" />
-  	<itemref idref="mathml-001" />
+  	<itemref idref="Readium-Logo-Page-JPEG" />
+  	<itemref idref="Readium-Logo-Page-PNG" />
+  	<itemref idref="Readium-Logo-Page-GIF" />
+  	<itemref idref="mathml-001"  properties="page-spread-left"/>
   	<itemref idref="mathml-002" />
   	<itemref idref="mathml-003" />
   	<itemref idref="mathml-004" />
-  	<itemref idref="svg-001" />
+  	<itemref idref="svg-001"  properties="page-spread-left"/>
   	<itemref idref="svg-002" />
   	<itemref idref="svg-003" properties="rendition:orientation-landscape"/>
   	<itemref idref="svg-004"/>
   	<itemref idref="svg-005"/>
   	<itemref idref="svg-006"/>
   	<itemref idref="svg-007"/>
-  	<itemref idref="fallbacks-001"/>
+  	<itemref idref="fallbacks-001"  properties="page-spread-left"/>
   	<itemref idref="fallbacks-002"/>
   	<itemref idref="fallbacks-003"/>
-  	<itemref idref="fonts-xhtml-001"/>
+  	<itemref idref="fonts-xhtml-001"  properties="page-spread-left"/>
   	<itemref idref="fonts-xhtml-002"/>
   	<itemref idref="fonts-xhtml-003"/>
   	<itemref idref="fonts-xhtml-004"/>
   	<itemref idref="fonts-svg-001"/>
   	<itemref idref="fonts-svg-002"/>
   	<itemref idref="fonts-svg-003"/>
-  	<itemref idref="scripting-001"/>
+  	<itemref idref="scripting-001"  properties="page-spread-left"/>
   	<itemref idref="scripting-002"/>
   	<itemref idref="scripting-003"/>
   	<itemref idref="scripting-004"/>
   	<itemref idref="scripting-005"/>
-  	<itemref idref="media-overlays-001"/>
+  	<itemref idref="media-overlays-001"  properties="page-spread-left"/>
   	<itemref idref="media-overlays-002"/>
   	<itemref idref="media-overlays-003"/>
   	<itemref idref="media-overlays-004"/>
   	<itemref idref="media-overlays-005"/>
-  	<itemref idref="epub-cfi-001"/>
+  	<itemref idref="epub-cfi-001"  properties="page-spread-left"/>
   	<itemref idref="epub-cfi-002"/>
   	<itemref idref="epub-cfi-003"/>
   	<itemref idref="epub-cfi-004"/>
-  	<itemref idref="epub-nav-001"/>
+  	<itemref idref="epub-nav-001"  properties="page-spread-left"/>
    	<itemref idref="epub-nav-002"/>
    	<itemref idref="epub-nav-003"/>
    	<itemref idref="epub-nav-004"/>
    	<itemref idref="epub-nav-005" linear="no"/>
-   	<itemref idref="epub-layout-001"/>
+   	<itemref idref="epub-layout-001"  properties="page-spread-left"/>
    	<itemref idref="epub-layout-002"/>
   	<itemref idref="epub-layout-003"/>
    	<itemref idref="epub-layout-004" properties="rendition:spread-both page-spread-left"/>

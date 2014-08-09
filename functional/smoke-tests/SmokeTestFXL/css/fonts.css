@@ -1,86 +1,6 @@
-.cff {
-    font-family: 'OldStandard-CFF', arial, helvetica, sans-serif;  
-}
 
-.ttf {
-    font-family: 'OldStandard-TTF', arial, helvetica, sans-serif;  
-}
-
-.woff {
-    font-family: 'OldStandard-WOFF', arial, helvetica, sans-serif;  
-}
-
-.cff-obf {
-    font-family: 'OldStandard-CFF-OBF', arial, helvetica, sans-serif;  
-}
-
-.ttf-obf {
-    font-family: 'OldStandard-TTF-OBF', arial, helvetica, sans-serif;  
-}
-
-.woff-obf {
-    font-family: 'OldStandard-WOFF-OBF', arial, helvetica, sans-serif;  
-}
-
-.cff-adb {
-    font-family: 'OldStandard-CFF-ADB', arial, helvetica, sans-serif;  
-}
-
-.ttf-adb {
-    font-family: 'OldStandard-TTF-ADB', arial, helvetica, sans-serif;  
-}
-
-.woff-adb {
-    font-family: 'OldStandard-WOFF-ADB', arial, helvetica, sans-serif;  
-}
-
-
-
-/* http://www.thessalonica.org.ru/en/fonts-download.html */
-
-
-/* woff (with TrueType outlines) */ 
-@font-face {
-    font-family: 'OldStandard-WOFF';
-    font-weight: normal;
-    font-style: normal;
-    src:url(../fonts/OldStandard-Regular.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'OldStandard-WOFF-OBF';
-    font-weight: normal;
-    font-style: normal;
-    src:url(../fonts/OldStandard-Regular.obf.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'OldStandard-WOFF-ADB';
-    font-weight: normal;
-    font-style: normal;
-    src:url(../fonts/OldStandard-Regular.adb.woff) format('woff');
-}
-
-/* ttf: OpenType fonts with TrueType outlines*/
-@font-face {
-    font-family: 'OldStandard-TTF';
-    font-weight: normal;
-    font-style: normal;
-    src:url(../fonts/OldStandard-Regular.ttf) format('opentype');
-}
-
-@font-face {
-    font-family: 'OldStandard-TTF-OBF';
-    font-weight: normal;
-    font-style: normal;
-    src:url(../fonts/OldStandard-Regular.obf.ttf) format('opentype');
-}
-
-@font-face {
-    font-family: 'OldStandard-TTF-ADB';
-    font-weight: normal;
-    font-style: normal;
-    src:url(../fonts/OldStandard-Regular.adb.ttf) format('opentype');
+.unicode-range {
+    font-family: 'OldStandard-TTF-GRK', arial, helvetica, sans-serif;
 }
 
 @font-face {
@@ -89,26 +9,103 @@
   unicode-range: U+0370-03FF,U+1F00-1FFF; 
 }
 
+/*-------------------------------------------*/
+.sandome {
+    font-family: 'Sandome', arial, helvetica, sans-serif;  
+}
+
+.sandome-adb {
+    font-family: 'Sandome-ADB', arial, helvetica, sans-serif;  
+}
+
+.sandome-obf {
+    font-family: 'Sandome-OBF', arial, helvetica, sans-serif;  
+}
+
+.Zantroke {
+    font-family: 'Zantroke', arial, helvetica, sans-serif;  
+}
+
+.Zantroke-obf {
+    font-family: 'Zantroke-OBF', arial, helvetica, sans-serif;  
+}
+
+.Zantroke-adb {
+    font-family: 'Zantroke-ADB', arial, helvetica, sans-serif;  
+}
+
+.rozel-cut {
+    font-family: 'rozelcut', arial, helvetica, sans-serif;  
+}
+
+.rozel-cut-obf {
+    font-family: 'rozelcut-obf', arial, helvetica, sans-serif;  
+}
+
+.rozel-cut-adb {
+    font-family: 'rozelcut-adb', arial, helvetica, sans-serif;  
+}
 
 
-/* otf: OpenType fonts with PostScript outlines (also called OpenType-CFF) */
 @font-face {
-    font-family: 'OldStandard-CFF';
+    font-family: 'Sandome';
     font-weight: normal;
     font-style: normal;
-    src:url(../fonts/OldStandard-Regular.otf) format('opentype');
+    src:url(../fonts/sandome.ttf) format('opentype');
 }
 
 @font-face {
-    font-family: 'OldStandard-CFF-OBF';
+    font-family: 'Sandome-ADB';
     font-weight: normal;
     font-style: normal;
-    src:url(../fonts/OldStandard-Regular.obf.otf) format('opentype');
+    src:url(../fonts/sandome.adb.ttf) format('opentype');
 }
 
 @font-face {
-    font-family: 'OldStandard-CFF-ADB';
+    font-family: 'Sandome-OBF';
     font-weight: normal;
     font-style: normal;
-    src:url(../fonts/OldStandard-Regular.adb.otf) format('opentype');
+    src:url(../fonts/sandome.obf.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Zantroke';
+    font-weight: normal;
+    font-style: normal;
+    src:url(../fonts/Zantroke.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Zantroke-OBF';
+    font-weight: normal;
+    font-style: normal;
+    src:url(../fonts/Zantroke.obf.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Zantroke-ADB';
+    font-weight: normal;
+    font-style: normal;
+    src:url(../fonts/Zantroke.adb.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'rozelcut';
+    font-weight: normal;
+    font-style: normal;
+    src:url(../fonts/cut-cut.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'rozelcut-obf';
+    font-weight: normal;
+    font-style: normal;
+    src:url(../fonts/cut-cut.obf.woff) format('woff');
+
+}
+@font-face {
+    font-family: 'rozelcut-adb';
+    font-weight: normal;
+    font-style: normal;
+    src:url(../fonts/cut-cut.adb.woff) format('woff');
 }
