@@ -41,6 +41,7 @@ import javax.xml.bind.DatatypeConverter;
 public class ObfuscateFont
 {
 	private static final int ADOBE_OBFUSCATE_LEN = 1024;
+	private static final int IDPF_OBFUSCATE_LEN = 1040;
 
 	/**
 	 * Create the Adobe key by cleaning out cruft and returning
@@ -57,20 +58,62 @@ public class ObfuscateFont
 
 	    return DatatypeConverter.parseHexBinary(cleanUUID);
 	}
+
+	/**
+	 * Encrypt the supplied string using a SHA-1 Hash.  This could 
+	 * be stronger by using a salt, etc. but this is lightweight
+	 * mangling, so hardly worth it.
+	 * 
+	 * @param x
+	 * @return
+	 */
+	public static byte[] encrypt(String x)  
+	{
+		try 
+		{
+			java.security.MessageDigest d = null;
+			d = java.security.MessageDigest.getInstance("SHA-1");
+			d.reset();
+			d.update(x.getBytes());
+			return d.digest();
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+
+		return null;
+	}
 	
+	/** 
+	 * Generate the IDPF key from the supplied unique ID
+	 * 
+	 * @param uuid
+	 * @return
+	 */
+	public static byte[] idpfKeyFromIdentifier( String uuid )
+	{
+	    String cleanUUID = uuid.replaceAll(" ", "");
+	    cleanUUID = cleanUUID.replaceAll("\t", "");
+	    cleanUUID = cleanUUID.replaceAll("\n", "");
+	    cleanUUID = cleanUUID.replaceAll("\r", "");
+
+		return encrypt(cleanUUID);
+	}
+
 	/**
 	 * Create the new obfuscated name by inserting .adb into the filename
 	 * 
 	 * @param fontToMangle
 	 * @return
 	 */
-	public static String makeObfuscatedName( String fontToMangle )
+	public static String makeObfuscatedName( String fontToMangle, String ext )
 	{
 		int	period = fontToMangle.lastIndexOf(".");
 		String last = fontToMangle.substring(period);
 		String front = fontToMangle.substring(0, period);
 		
-		return front + ".adb" + last;
+		return front + ext + last;
 	}
 	
 	/**
@@ -112,19 +155,20 @@ public class ObfuscateFont
 	}
 	
 	/**
-	 * Obfuscate the file by copying the original file to the new
-	 * obfuscated name then mangling the file in-place.
+	 * Generic obfuscation.  Requires only the font to mangle, the key, 
+	 * number of bytes to mangle and the extension to insert 
 	 * 
 	 * @param fontToMangle
-	 * @param uuid
+	 * @param key
+	 * @param obfLen
+	 * @param ext
 	 * @return
 	 */
-	public static boolean adobeObfuscate( String fontToMangle, String uuid )
+	public static boolean obfuscate( String fontToMangle, byte[] key, int obfLen, String ext )
 	{
 		boolean	success = false;
-		byte[] key = adobeKeyFromIdentifier(uuid);
 		int	keyIndex = 0;
-		String	obfName = makeObfuscatedName(fontToMangle);
+		String	obfName = makeObfuscatedName(fontToMangle, ext);
 		
     	System.out.printf("The key being used:\n");
 		for ( int n=0; n<key.length; n++)
@@ -140,7 +184,7 @@ public class ObfuscateFont
 
 			fontFile = new RandomAccessFile(obfName, "rw");
 
-		    for ( int i=0; i<ADOBE_OBFUSCATE_LEN; i++ )
+		    for ( int i=0; i<obfLen; i++ )
 		    {
 		    	byte b = fontFile.readByte();
 		    	long pos = fontFile.getFilePointer();
@@ -171,6 +215,40 @@ public class ObfuscateFont
 	}
 	
 	/**
+	 * Obfuscate the file by copying the original file to the new
+	 * obfuscated name then mangling the file in-place, using the Adobe method
+	 * 
+	 * http://www.adobe.com/content/dam/Adobe/en/devnet/digitalpublishing/pdfs/content_protection.pdf
+	 * 
+	 * @param fontToMangle
+	 * @param uuid
+	 * @return
+	 */
+	public static boolean adobeObfuscate( String fontToMangle, String uuid )
+	{
+		byte[] key = adobeKeyFromIdentifier(uuid);
+
+		return obfuscate(fontToMangle, key, ADOBE_OBFUSCATE_LEN, ".adb");
+	}
+
+	/**
+	 * Obfuscate the file by copying the original file to the new
+	 * obfuscated name then mangling the file in-place, using the IDPF method
+	 * 
+	 * http://www.idpf.org/epub/20/spec/FontManglingSpec.html
+	 * 
+	 * @param fontToMangle
+	 * @param uuid
+	 * @return
+	 */
+	public static boolean idpfObfuscate( String fontToMangle, String uuid )
+	{
+		byte[] key = idpfKeyFromIdentifier(uuid);
+
+		return obfuscate(fontToMangle, key, IDPF_OBFUSCATE_LEN, ".obf");
+	}
+
+	/**
 	 * required args are
 	 * 0 - name of the file to be copied and the copy mangled
 	 * 1 - the key to use in the mangling
@@ -179,7 +257,17 @@ public class ObfuscateFont
 	 */
 	public static void main(String[] args)
 	{
-		if (args.length == 2 && adobeObfuscate(args[0], args[1]) == true)			
+		boolean flag = false;
+		
+		if (args.length == 3 )
+		{
+			if (args[2].compareToIgnoreCase("Adobe") == 0)
+			
+				flag = adobeObfuscate(args[0], args[1]);			
+			else
+				flag = idpfObfuscate(args[0], args[1]);		
+		}
+		if (flag)
 			System.out.printf("Successfully mangled font file: %s.\n",args[0]);
 		else
 			System.err.printf("Failed to mangle font file: %s.\n",args[0]);
