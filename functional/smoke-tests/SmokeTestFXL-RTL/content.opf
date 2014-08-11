@@ -52,6 +52,8 @@
   	<item id="pagination-02" href="xhtml/pagination-002.xhtml" media-type="application/xhtml+xml"/>
   	<item id="pagination-03" href="xhtml/pagination-003.xhtml" media-type="application/xhtml+xml"/>
   	<item id="display-01" href="xhtml/display-001.xhtml" media-type="application/xhtml+xml"/>
+  	<item id="spinenav-01" href="xhtml/spinenav-001.xhtml" media-type="application/xhtml+xml"/>
+  	<item id="spinenav-02" href="xhtml/spinenav-002.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
  <spine page-progression-direction="rtl">
   	<itemref idref="titlepage" />
@@ -66,5 +68,7 @@
   	<itemref idref="pagination-02" properties="rendition:spread-both page-spread-right"/>
   	<itemref idref="pagination-03" properties="rendition:spread-both page-spread-left"/>
    	<itemref idref="display-01" />
+   	<itemref idref="spinenav-01" properties="rendition:spread-none"/>
+   	<itemref idref="spinenav-02"  properties="rendition:spread-none"/>
  </spine>
 </package>
