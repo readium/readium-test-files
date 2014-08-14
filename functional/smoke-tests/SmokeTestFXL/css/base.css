@@ -88,3 +88,29 @@ nav a {
 .conditional {
 	font-style: italic;
 }
+
+.skippable {
+    background-color: green;
+    color: white;
+	padding: 0.6em;
+}
+
+.escapable1 {
+	border: 4px solid blue;
+	padding: 0.6em;
+}
+
+.escapable2 {
+	border: 8px solid magenta;
+	padding: 0.6em;
+}
+
+.-epub-media-overlay-active {
+    background-color: pink !important;
+    color: black !important;
+}
+
+.-epub-media-overlay-playback-active .mo-playing {
+    background-color: green !important;
+    color: white !important;
+}
