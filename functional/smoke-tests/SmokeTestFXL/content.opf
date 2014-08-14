@@ -142,6 +142,8 @@
    	<item id="media-overlays-003" href="xhtml/media-overlays-003.xhtml" media-type="application/xhtml+xml"  media-overlay="smil-1"/>
    	<item id="media-overlays-004" href="xhtml/media-overlays-004.xhtml" media-type="application/xhtml+xml"  media-overlay="smil-10"/>
    	<item id="media-overlays-005" href="xhtml/media-overlays-005.xhtml" media-type="application/xhtml+xml"  media-overlay="smil-11"/>
+    <item id="media-overlays-006" href="xhtml/media-overlays-006.xhtml" media-type="application/xhtml+xml"  media-overlay="smil-11"/>
+    <item id="media-overlays-007" href="xhtml/media-overlays-007.xhtml" media-type="application/xhtml+xml"  media-overlay="smil-11"/>
  	<!--  Chapter 10 - EPUB CFI --> 
    	<item id="epub-cfi-001" href="xhtml/epub-cfi-001.xhtml" media-type="application/xhtml+xml"/>
    	<item id="epub-cfi-002" href="xhtml/epub-cfi-002.xhtml" media-type="application/xhtml+xml"/>
@@ -232,6 +234,8 @@
   	<itemref idref="media-overlays-003"/>
   	<itemref idref="media-overlays-004"/>
   	<itemref idref="media-overlays-005"/>
+  	<itemref idref="media-overlays-006"/>
+  	<itemref idref="media-overlays-007"/>
   	<itemref idref="epub-cfi-001"  properties="page-spread-left"/>
   	<itemref idref="epub-cfi-002"/>
   	<itemref idref="epub-cfi-003"/>
