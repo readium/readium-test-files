@@ -153,6 +153,7 @@
  	<!--  Chapter 11 - Navigation --> 
    	<item id="epub-nav-001" href="xhtml/epub-nav-001.xhtml" media-type="application/xhtml+xml"/>
    	<item id="epub-nav-002" href="xhtml/epub-nav-002.xhtml" media-type="application/xhtml+xml"/>
+   	<item id="epub-nav-002b" href="xhtml/epub-nav-002b.xhtml" media-type="application/xhtml+xml"/>
    	<item id="epub-nav-003" href="xhtml/epub-nav-003.xhtml" media-type="application/xhtml+xml"/>
    	<item id="epub-nav-004" href="xhtml/epub-nav-004.xhtml" media-type="application/xhtml+xml"/>
    	<item id="epub-nav-005" href="xhtml/epub-nav-005.xhtml" media-type="application/xhtml+xml"/>
@@ -243,6 +244,7 @@
   	<itemref idref="epub-cfi-004"  properties="rendition:spread-none rendition:layout-reflowable"/>
   	<itemref idref="epub-nav-001"  properties="page-spread-left"/>
    	<itemref idref="epub-nav-002"/>
+   	<itemref idref="epub-nav-002b"  linear="no" properties="rendition:spread-none rendition:layout-reflowable rendition:flow-scrolled-doc "/>
    	<itemref idref="epub-nav-003"/>
    	<itemref idref="epub-nav-004"/>
    	<itemref idref="epub-nav-005" linear="no"/>
