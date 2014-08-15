@@ -47,6 +47,7 @@
 	<item id="img-005" href="images/nonimage.xyz" media-type="image/xyz" fallback="img-006"/>
 	<item href="images/fallback.png" id="img-006" media-type="image/png"/>
  	<item href="images/EPUB-Logo-Smoke.png" id="EPUB-Logo-Smoke" media-type="image/png"  properties="cover-image"/>
+ 	<item href="images/spatial.png" id="spatial" media-type="image/png"/>
   	<!-- frontmatter -->
   	<item id="nav" href="xhtml/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
   	<item id="titlepage" href="xhtml/titlepage.xhtml" media-type="application/xhtml+xml"/>
@@ -239,7 +240,7 @@
   	<itemref idref="epub-cfi-001"  properties="page-spread-left"/>
   	<itemref idref="epub-cfi-002"/>
   	<itemref idref="epub-cfi-003"/>
-  	<itemref idref="epub-cfi-004"/>
+  	<itemref idref="epub-cfi-004"  properties="rendition:spread-none rendition:layout-reflowable"/>
   	<itemref idref="epub-nav-001"  properties="page-spread-left"/>
    	<itemref idref="epub-nav-002"/>
    	<itemref idref="epub-nav-003"/>

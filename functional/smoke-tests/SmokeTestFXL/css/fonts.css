@@ -9,6 +9,14 @@
   unicode-range: U+0370-03FF,U+1F00-1FFF; 
 }
 
+.old-standard {
+    font-family: 'OldStandard', arial, helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'OldStandard';
+  src:url(../fonts/OldStandard-Regular.ttf) format('opentype'); 
+}
 /*-------------------------------------------*/
 .sandome {
     font-family: 'Sandome', arial, helvetica, sans-serif;  
