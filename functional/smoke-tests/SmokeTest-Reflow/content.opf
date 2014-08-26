@@ -35,6 +35,7 @@
     <item id="chapter_001_audio" href="audio/mobydick_001_002_melville.mp4" media-type="audio/mp4"/>
    	<!-- front matter -->
    	<item id="toc" properties="nav" href="xhtml/toc.xhtml" media-type="application/xhtml+xml"/>
+   	<item id="loi" href="xhtml/loi.xhtml" media-type="application/xhtml+xml"/>
     <item id="cover" href="xhtml/cover.xhtml" media-type="application/xhtml+xml"/>
    	<!-- css -->
    	<item id="style" href="css/stylesheet.css" media-type="text/css"/>
@@ -51,6 +52,7 @@
    </manifest>
   <spine>
     <itemref idref="toc" linear="no"/>
+    <itemref idref="loi" linear="no"/>
     <itemref idref="chapter_001"/>
     <itemref idref="signature-fxl" properties="rendition:layout-pre-paginated"/>   
     <itemref idref="chapter_002"/>
