@@ -110,6 +110,7 @@
   	<item id="mathml-002" href="xhtml/mathml-002.xhtml" media-type="application/xhtml+xml" properties="mathml"/>
   	<item id="mathml-003" href="xhtml/mathml-003.xhtml" media-type="application/xhtml+xml" properties="mathml"/>
   	<item id="mathml-004" href="xhtml/mathml-004.xhtml" media-type="application/xhtml+xml" properties="mathml"/>
+ 	<item id="mathml-005" href="xhtml/mathml-005.xhtml" media-type="application/xhtml+xml" properties="mathml"/>
   	<!--  Chapter 5 SVG in the Page -->  
   	<item id="svg-001" href="xhtml/svg-001.xhtml" media-type="application/xhtml+xml"/>
   	<item id="svg-002" href="xhtml/svg-002.xhtml" media-type="application/xhtml+xml" properties="svg"/>
@@ -209,6 +210,7 @@
   	<itemref idref="mathml-002" />
   	<itemref idref="mathml-003" />
   	<itemref idref="mathml-004" />
+  	<itemref idref="mathml-005" />
   	<itemref idref="svg-001"  properties="page-spread-left"/>
   	<itemref idref="svg-002" />
   	<itemref idref="svg-003" properties="rendition:orientation-landscape"/>
