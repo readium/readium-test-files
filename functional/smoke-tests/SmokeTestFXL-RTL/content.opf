@@ -48,6 +48,8 @@
   	<item id="text-direction-03" href="xhtml/text-direction-003.xhtml" media-type="application/xhtml+xml"/>
   	<item id="text-direction-04" href="xhtml/text-direction-004.xhtml" media-type="application/xhtml+xml"/>
   	<item id="text-direction-05" href="xhtml/text-direction-005.xhtml" media-type="application/xhtml+xml"/>
+  	<item id="text-direction-06" href="xhtml/text-direction-006.xhtml" media-type="application/xhtml+xml"/>
+  	<item id="text-direction-06b" href="xhtml/text-direction-006b.xhtml" media-type="application/xhtml+xml"/>
   	<item id="pagination-01" href="xhtml/pagination-001.xhtml" media-type="application/xhtml+xml"/>
   	<item id="pagination-02" href="xhtml/pagination-002.xhtml" media-type="application/xhtml+xml"/>
   	<item id="pagination-03" href="xhtml/pagination-003.xhtml" media-type="application/xhtml+xml"/>
@@ -64,6 +66,8 @@
   	<itemref idref="text-direction-03" />
   	<itemref idref="text-direction-04" properties="rendition:spread-both page-spread-right"/>
   	<itemref idref="text-direction-05" properties="rendition:spread-both page-spread-left"/>
+  	<itemref idref="text-direction-06" properties="rendition:spread-none"/>
+  	<itemref idref="text-direction-06b" properties="rendition:spread-none" linear="no"/>
    	<itemref idref="pagination-01" />
   	<itemref idref="pagination-02" properties="rendition:spread-both page-spread-right"/>
   	<itemref idref="pagination-03" properties="rendition:spread-both page-spread-left"/>
