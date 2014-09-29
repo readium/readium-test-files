@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<meta name="viewport" content="width=576, height=1024"/>
+	</head>
+	<body>
+		<section id="fxl-230" class="ctest">
+			<h2><span class="nature">[REQUIRED]</span>
+				<span class="test-id">fxl-230</span> Fixed layout support</h2>
+			<p class="desc">Tests whether setting the itemref property <code>rendition:flow</code>-* property to 
+			   <code>flow-scrolled-doc</code> or <code>flow-scrolled-continuous</code> has any effect. The file declares its layout to 
+			   be <code>pre-paginated</code> and the <code>rendition-flow</code> to be <code>paginated</code>. Per spec, 
+			   pre-paginated layout cannot be overridden with <code>rendition:flow-*</code>, so the overrides should be ignored.  So all chapters 
+			   should be paginated. </p>
+			<p class="eval">If all spine items are paginated, then the test passes.</p>
+		</section>
+	</body>
+</html>

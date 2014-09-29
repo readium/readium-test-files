@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<meta name="viewport" content="width=576, height=1024"/>
+	</head>
+	<body>
+		<section id="fxl-220" class="ctest">
+			<h2><span class="nature">[REQUIRED]</span>
+				<span class="test-id">fxl-220</span> Fixed layout support</h2>
+							<p class="desc">Tests whether setting the global <code>rendition:flow</code> property to 
+			   <code>auto</code> so the pages should be laid out as one page at a time. 
+			   The file declares itself to be pre-paginated so that's what you should see. </p>
+			<p class="eval">If the RS user settings specify auto then  the pages should be paginated.  Per spec, the rendtion:flow property MUST be ignored for 
+			   pre-paginated content </p>
+
+			<p class="conditional">Each page should be in fixed layout, with a grey background, a red border and a centered page 
+			number at the bottom </p>
+		</section>
+	</body>
+</html>

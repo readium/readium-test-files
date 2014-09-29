@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+	</head>
+	<body>
+		<section id="rnd-229" class="ctest">
+			<h2><span class="nature">[REQUIRED]</span>
+				<span class="test-id">Rendition-229</span> Rendition Properties Support</h2>
+			<p class="desc">Tests whether the global <code>rendition:flow</code> property of <code>paginated</code> 
+			can be overridden. The file declares <code>rendition:layout</code> to be <code>reflowable</code> and the 
+			<code>rendition:flow</code> to be <code>paginated</code>. So the first item (chapter) should be a series of pages. 
+			The second spine item (chapter) has an override of <code>flow-scrolled-doc</code> so that item should be a single scrollable view</p>
+			<p class="eval">If the first spine item is paginated and the last item is a scrollable view, then the test passes.</p>
+		</section>
+	</body>
+</html>

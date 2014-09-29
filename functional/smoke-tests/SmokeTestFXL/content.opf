@@ -58,6 +58,7 @@
   	<item id="math-css" href="css/math.css" media-type="text/css"/>
   	<item id="fonts-css" href="css/fonts.css" media-type="text/css"/>
    	<item id="nested-css" href="css/nested.css" media-type="text/css"/>
+   	<item id="media-css" href="css/media.css" media-type="text/css"/>
   	<!-- scripts -->
   	<item id="TempWaveJS" href="scripts/TempWave.js" media-type="text/javascript"/>
   	<item id="rso-js" href="scripts/rso.js" media-type="text/javascript"/>
