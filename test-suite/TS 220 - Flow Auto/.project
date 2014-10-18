@@ -6,6 +6,15 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
+			<name></name>
+			<arguments>
+				<dictionary>
+					<key>ePubFileName</key>
+					<value>epub30-test-0220.epub</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>com.geofx.epubcrude.builder</name>
 			<arguments>
 			</arguments>
