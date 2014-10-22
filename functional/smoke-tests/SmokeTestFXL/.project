@@ -8,6 +8,10 @@
 		<buildCommand>
 			<name>com.geofx.epubcrude.builder</name>
 			<arguments>
+				<dictionary>
+					<key>ePubFileName</key>
+					<value>SmokeTestFXL.epub</value>
+				</dictionary>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
