@@ -31,9 +31,9 @@ if [ $# -ne 2 ]
 fi
 
 # save the argument - the branch name
-ZIPNAME=$1
-FOLDER=$2
-printg "Zipping folder $FOLDER into zipfile $ZIPNAME"
+FOLDER=$1
+ZIPNAME=$2
+printg "Creating EPUB \"$ZIPNAME.epub\" from folder \"$FOLDER\""
 
 # save the original folder
 ROOT_PWD=$(pwd)
@@ -56,7 +56,7 @@ ls -l $ZIPNAME.epub
 
 echo "${green}Checking EPUB '$ZIPNAME.epub' against epubcheck 4.0.0.${NC}"
 
-java -cp /Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/lib  -jar /Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/epubcheck.4.0.0.jar $ZIPNAME.epub
+java -cp /Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/lib  -jar /Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/epubcheck.4.0.0.jar $FOLDER/$ZIPNAME.epub
 
 # and return to the original folder
 cd $pwd

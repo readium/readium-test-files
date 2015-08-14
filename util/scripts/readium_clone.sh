@@ -10,28 +10,71 @@
 red='\033[1;31m'
 green='\033[0;32m'
 NC='\033[00m' # no color
+
+function echo_pwd {
+	printf "${green}"
+	pwd
+	printf "${NC}"
+}
+
+function printg {
+	printf "${green}"
+	printf %s "$1"
+	printf "${NC}\n"
+}
+
+function printr {
+	printf "${red}"
+	printf %s "$1"
+	printf "${NC}\n"
+}
+
+function init_repo {
+    rm -rf $2
+    git clone --recursive $1 $2
+    cd $2
+	echo_pwd
+    git flow init -fd
+ 	git checkout $BRANCH
+    cd $ROOT_PWD
+}
+
+function init_subrepo {
+    cd $1
+    echo_pwd
+    git flow init -fd
+    git submodule init
+    git submodule update
+    git checkout $BRANCH
+    cd $ROOT_PWD
+}
+#-------------------------------------------------------
+
 if [ $# -eq 0 ]
   then
-    echo "${red}No branch tag supplied!  Exiting...${NC}"
-    echo "Usage: ./readium_clone.sh <branch> [<repo-suffix>]"
+    printr "No branch tag supplied!  Exiting..."
+    printr "Usage: ./readium_clone.sh <branch> [<repo-suffix>]"
+    printr "To clone master: ./readium_clone.sh master [<repo-suffix>]"
     exit 1
 fi
 
 # save the argument - the branch name
 BRANCH=$1
-echo "${green}Cloning from branch '$BRANCH' in each repo.${NC}"
+printg "Cloning from branch '$BRANCH' in each repo."
 
+# see if the user supplied a suffix
 SUFFIX=''
 if [ $# -eq  2 ]
   then
     SUFFIX=$2
-    echo "${green}Appending sufffix '$SUFFIX' onto each app repo folder.${NC}"
+    printg "Appending sufffix '$SUFFIX' onto each app repo folder."
 fi
 
 # save the original folder
 ROOT_PWD=$(pwd)
-echo "${green}Root folder = $ROOT_PWD${NC}" 
+printg "Root folder = $ROOT_PWD" 
 
+printg "Removing any pre-existing folders..."
 # first get rid of the old repos, if any
 rm -rf readium-js-viewer$SUFFIX
 rm -rf SDKLauncher-Android$SUFFIX
@@ -44,100 +87,78 @@ rm -rf SDKLauncher-OSX$SUFFIX
 # we have to clone the master then switch to $BRANCH rather than cloning directly 
 # into only $BRANCH
 
-git clone --recursive https://github.com/readium/readium-js-viewer.git readium-js-viewer$SUFFIX
-cd readium-js-viewer$SUFFIX
-pwd
-git checkout $BRANCH
-cd readium-js
-pwd
-git checkout $BRANCH
-cd epub-modules/epub-renderer/src/readium-shared-js
-pwd
-git checkout $BRANCH
+printg "Cloning Android --------"
+init_repo "https://github.com/readium/SDKLauncher-Android.git" "SDKLauncher-Android$SUFFIX"
+init_subrepo "SDKLauncher-Android$SUFFIX/readium-sdk"
+init_subrepo "SDKLauncher-Android$SUFFIX/readium-shared-js"
+init_subrepo "SDKLauncher-Android$SUFFIX/readium-shared-js/readium-cfi-js"
 
+printg "Cloning iOS --------"
+init_repo "https://github.com/readium/SDKLauncher-iOS.git" "SDKLauncher-iOS$SUFFIX"
+init_subrepo "SDKLauncher-iOS$SUFFIX/readium-sdk"
+init_subrepo "SDKLauncher-iOS$SUFFIX/Resources/readium-shared-js"
+init_subrepo "SDKLauncher-iOS$SUFFIX/Resources/readium-shared-js/readium-cfi-js"
+
+printg "Cloning OSX --------"
 cd $ROOT_PWD
-git clone --recursive https://github.com/readium/SDKLauncher-Android.git SDKLauncher-Android$SUFFIX 
-cd SDKLauncher-Android$SUFFIX
-pwd
-git checkout $BRANCH
-cd readium-sdk
-pwd
-git checkout $BRANCH
-cd ../readium-shared-js
-pwd
-git checkout $BRANCH
+init_repo "https://github.com/readium/SDKLauncher-OSX.git" "SDKLauncher-OSX$SUFFIX"
+init_subrepo "SDKLauncher-OSX$SUFFIX/readium-sdk"
+init_subrepo "SDKLauncher-OSX$SUFFIX/readium-shared-js"
+init_subrepo "SDKLauncher-OSX$SUFFIX/readium-shared-js/readium-cfi-js"
 
-cd $ROOT_PWD
-git clone --recursive https://github.com/readium/SDKLauncher-iOS.git  SDKLauncher-iOS$SUFFIX
-cd SDKLauncher-iOS$SUFFIX
-pwd
-git checkout $BRANCH
-cd readium-sdk
-pwd
-git checkout $BRANCH
-cd ../Resources/readium-shared-js
-pwd
-git checkout $BRANCH
+printg "Cloning readium-js-viewer --------"
+init_repo "https://github.com/readium/readium-js-viewer.git" "readium-js-viewer$SUFFIX" 
+init_subrepo "readium-js-viewer$SUFFIX/readium-js"
+init_subrepo "readium-js-viewer$SUFFIX/readium-js/readium-shared-js"
+init_subrepo "readium-js-viewer$SUFFIX/readium-js/readium-shared-js/readium-cfi-js"
 
-cd $ROOT_PWD
-git clone --recursive https://github.com/readium/SDKLauncher-OSX.git SDKLauncher-OSX$SUFFIX
-cd SDKLauncher-OSX$SUFFIX
-pwd
-git checkout $BRANCH
-cd readium-sdk
-pwd
-git checkout $BRANCH
-cd ../readium-shared-js
-pwd
-git checkout $BRANCH
-
+#printg "Cloning Windows --------"
 # cd $ROOT_PWD
-# git clone --recursive https://github.com/readium/SDKLauncher-Windows.git SDKLauncher-Windows$SUFFIX
+# git clone --recursive https://github.com/readium/SDKLauncher-Windows.git -b $BRANCH SDKLauncher-Windows$SUFFIX
 # cd SDKLauncher-Windows$SUFFIX
-# pwd
-# git checkout $BRANCH
+# init_repo
 # cd readium-sdk
-# pwd
-# git checkout $BRANCH
+# init_repo
 # cd ../readium-shared-js
-# pwd
-# git checkout $BRANCH
+# init_repo
 
-# Now verify that the commit hashes are the same for each submodule
+printg "Now verifying that the commit hashes are the same for each shared-js submodule -------"
 echo "${green}Comparing shared-js submodules${NC}"
-cd $ROOT_PWD/readium-js-viewer$SUFFIX/readium-js/epub-modules/epub-renderer/src/readium-shared-js
-pwd
+cd $ROOT_PWD/readium-js-viewer$SUFFIX/readium-js/readium-shared-js
+echo_pwd
 git log -n 1 --pretty=format:"%H" $BRANCH
 
 cd $ROOT_PWD/SDKLauncher-Android$SUFFIX/readium-shared-js
-pwd
+echo_pwd
 git log -n 1 --pretty=format:"%H" $BRANCH
 
 cd $ROOT_PWD/SDKLauncher-iOS$SUFFIX/Resources/readium-shared-js
-pwd
+echo_pwd
 git log -n 1 --pretty=format:"%H" $BRANCH
 
 cd $ROOT_PWD/SDKLauncher-OSX$SUFFIX/readium-shared-js
-pwd
+echo_pwd
 git log -n 1 --pretty=format:"%H" $BRANCH
 
 # cd $ROOT_PWD/SDKLauncher-Windows$SUFFIX/readium-shared-js
-# pwd
+# echo_pwd
 # git log -n 1 --pretty=format:"%H" $BRANCH
 
-echo "${green}Comparing readium-sdk submodules${NC}"
+printg "Now verifying that the commit hashes are the same for each readium-sdk submodules --------"
 cd $ROOT_PWD/SDKLauncher-Android$SUFFIX/readium-sdk
-pwd
+echo_pwd
 git log -n 1 --pretty=format:"%H" $BRANCH
 
 cd $ROOT_PWD/SDKLauncher-iOS$SUFFIX/readium-sdk
-pwd
+echo_pwd
 git log -n 1 --pretty=format:"%H" $BRANCH
 
 cd $ROOT_PWD/SDKLauncher-OSX$SUFFIX/readium-sdk
-pwd
+echo_pwd
 git log -n 1 --pretty=format:"%H" $BRANCH
 
 # cd $ROOT_PWD/SDKLauncher-Windows$SUFFIX/readium-sdk
-# pwd
+# echo_pwd
 # git log -n 1 --pretty=format:"%H" $BRANCH
+
+printg "-------- Clone of branch $BRANCH complete -----------"
