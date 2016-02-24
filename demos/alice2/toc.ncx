@@ -1,0 +1,85 @@
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+	<head>
+	  <meta name="dtb:uid" content="fab106a7-1f9f-4716-8c80-08932fe21b66" />
+      <meta name="dtb:depth" content="1" />
+      <meta name="dtb:totalPageCount" content="100" />
+      <meta name="dtb:maxPageNumber" content="100" />
+	</head>
+	   <docTitle>
+      <text>Alice in Wonderland</text>
+   </docTitle>
+	<navMap>
+		<navPoint id="chapter01">
+			<navLabel>
+				<text>I. Down the Rabbit-Hole</text>
+			</navLabel>
+			<content src="chapter01.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter02">
+			<navLabel>
+				<text>II. The Pool of Tears</text>
+			</navLabel>
+			<content src="chapter02.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter03">
+			<navLabel>
+				<text>III. A Caucus-Race and a Long Tale</text>
+			</navLabel>
+			<content src="chapter03.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter04">
+			<navLabel>
+				<text>IV. The Rabbit Sends in a Little Bill</text>
+			</navLabel>
+			<content src="chapter04.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter05">
+			<navLabel>
+				<text>V. Advice from a Caterpillar</text>
+			</navLabel>
+			<content src="chapter05.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter06">
+			<navLabel>
+				<text>VI. Pig and Pepper</text>
+			</navLabel>
+			<content src="chapter06.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter07">
+			<navLabel>
+				<text>VII. A Mad Tea-Party</text>
+			</navLabel>
+			<content src="chapter07.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter08">
+			<navLabel>
+				<text>VIII. The Queen's Croquet-Ground</text>
+			</navLabel>
+			<content src="chapter08.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter09">
+			<navLabel>
+				<text>IX. The Mock Turtle's Story</text>
+			</navLabel>
+			<content src="chapter09.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter10">
+			<navLabel>
+				<text>X. The Lobster Quadrille</text>
+			</navLabel>
+			<content src="chapter10.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter11">
+			<navLabel>
+				<text>XI. Who Stole the Tarts?</text>
+			</navLabel>
+			<content src="chapter11.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter12">
+			<navLabel>
+				<text>XII. Alice's Evidence</text>
+			</navLabel>
+			<content src="chapter12.xhtml"/>
+		</navPoint>
+	</navMap>
+</ncx>

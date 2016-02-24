@@ -1,13 +1,17 @@
 #!/bin/sh
 #---------------------------------------------------
-# This script is configured to zip up the specified 
-# directory in the standard EPUB-compliant way
+# This script updates the OPF's dcterms:modified 
+# field first, then zips up the specified directory 
+# in the standard EPUB-compliant way. Finally, it runs 
+# epucheck against the resulting EPUB.
+# 
 # @rkwright, July 2015
 #---------------------------------------------------
-# make sure the supplied a version
 red='\033[1;31m'
 green='\033[0;32m'
 NC='\033[00m' # no color
+EPUBCHECKLIB='/Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/lib'
+EPUBCHECKJAR='/Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/epubcheck.4.0.1.jar'
 
 function printg {
 	printf "${green}"
@@ -22,11 +26,11 @@ function printr {
 }
 
 #-------------------------------------------------------
-
+# make sure they supplied some args...
 if [ $# -ne 2 ]
   then
-    printr "No zipfile name or target specified! Exiting..."
-    printr "Usage: ./zip-epub.sh <zipfilename> <target-dir>"
+    printr "No src-folder and/or zipfile name specified! Exiting..."
+    printr "Usage: ./zip-epub.sh <src-dir> <zipfilename>"
     exit 1
 fi
 
@@ -44,6 +48,10 @@ cd $FOLDER
 # remove the old file, if any
 rm $ZIPNAME.epub
 
+# update the mod time of the OPF file
+OPFFILE=$(find $FOLDER -name *.opf)
+java  -jar /Users/rkwright/Documents/github/readium-test-files/util/scripts/UpdateModTime.jar $OPFFILE
+
 # start the zip with the uncompressed mimetype file, per spec
 zip -X -0 $ZIPNAME mimetype
 
@@ -56,7 +64,7 @@ ls -l $ZIPNAME.epub
 
 echo "${green}Checking EPUB '$ZIPNAME.epub' against epubcheck 4.0.0.${NC}"
 
-java -cp /Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/lib  -jar /Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/epubcheck.4.0.0.jar $FOLDER/$ZIPNAME.epub
+java -cp $EPUBCHECKLIB -jar $EPUBCHECKJAR  $FOLDER/$ZIPNAME.epub
 
 # and return to the original folder
 cd $pwd

@@ -73,8 +73,8 @@
     <item id="smil-11" href="mo/escapability.smil" media-type="application/smil+xml"/>
 	<!-- fonts -->
 	<item id="font-ttf" href="fonts/OldStandard-Regular.ttf" media-type="application/x-font-ttf"/>
-  	<item id="sandome-ttf" href="fonts/sandome.ttf" media-type="application/x-font-ttf"/>
-  	<item id="sandomw-ttf-adb" href="fonts/sandome.adb.ttf" media-type="application/x-font-ttf"/>
+  <item id="sandome-ttf" href="fonts/sandome.ttf" media-type="application/x-font-ttf"/>
+  <item id="sandome-ttf-adb" href="fonts/sandome.adb.ttf" media-type="application/x-font-ttf"/>
 	<item id="sandome-ttf-obf" href="fonts/sandome.obf.ttf" media-type="application/x-font-ttf"/>
 	<item id="zantroke" href="fonts/Zantroke.otf" media-type="application/vnd.ms-opentype"/>
 	<item id="zantroke-obf" href="fonts/Zantroke.obf.otf" media-type="application/vnd.ms-opentype"/>

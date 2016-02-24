@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package version="3.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" prefix="rendition:
+    http://www.idpf.org/vocab/rendition/# ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<meta name="generator" content="WebStorm/Dreamweaver/bash" />
+		<dc:title>NeHe-INDB-2-15</dc:title>
+        <dc:creator>Ric Wright</dc:creator>
+        <dc:publisher>Geo-F/X</dc:publisher>
+ 		<dc:date>2016-02-12T20:21:44Z</dc:date>
+		<dc:language>en-US</dc:language>
+		<meta property="dcterms:modified">2016-02-12T20:21:44Z</meta>
+		<dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+		<!--layout options-->
+		<meta property="rendition:layout">reflowable</meta>
+		<meta property="rendition:spread">auto</meta>
+		<meta name="cover" content="nehe-cover.png" />
+	</metadata>
+	<manifest>
+		<!--  images  -->
+  		<item id="webgl_logo" href="images/webgl.jpg" media-type="image/jpeg" />
+ 		<item id="nehe-cover.png" href="images/NeHe-2-15.png" media-type="image/png" />
+ 		<item id="checkerboard" href="images/checkerboard.jpg" media-type="image/jpeg" />
+
+  		<!-- css -->
+		<item id="NeHe" href="css/NeHe.css" media-type="text/css"/>
+		<item id="NeHe-EPUB" href="css/NeHe-EPUB.css" media-type="text/css"/>
+		<item id="prism-css" href="css/prism.css" media-type="text/css"/>
+
+ 		<!-- scripts -->
+ 		<item id="detector" href="js/Detector.js" media-type="text/javascript"/>
+ 		<item id="threejs" href="js/three.js" media-type="text/javascript"/>
+ 		<item id="jquery" href="js/jquery-1.9.1.js" media-type="text/javascript"/>
+  		<item id="OrbitControls" href="js/OrbitControls-Touch.js" media-type="text/javascript"/>
+ 		<item id="Scene" href="js/Scene.js" media-type="text/javascript"/>
+ 		<item id="Stats" href="js/Stats.js" media-type="text/javascript"/>
+		<item id="prism-s" href="js/prism.js" media-type="text/javascript"/>
+
+ 		<!-- fonts-js -->	
+ 		<item id="gentilis-bold" href="fonts/gentilis_bold.typeface.js" media-type="text/javascript"/>		
+ 		<item id="gentilis-regular" href="fonts/gentilis_regular.typeface.js" media-type="text/javascript"/>		
+ 		<item id="helvetiker-bold-italic" href="fonts/helvetiker_bold_italic.typeface.js" media-type="text/javascript"/>
+ 		<item id="helvetiker-bold" href="fonts/helvetiker_bold.typeface.js" media-type="text/javascript"/>
+ 		<item id="helvetiker-italic" href="fonts/helvetiker_italic.typeface.js" media-type="text/javascript"/>
+ 		<item id="helvetiker-regular" href="fonts/helvetiker_regular.typeface.js" media-type="text/javascript"/>
+ 		<item id="LICENSE" href="fonts/LICENSE" media-type="application/plain"/>
+
+		<!-- front matter -->
+		<item id="coverpage" href="frontmatter/cover.xhtml" media-type="application/xhtml+xml" />
+		<item id="toc" href="frontmatter/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+		<item id="preface" href="frontmatter/preface.xhtml" media-type="application/xhtml+xml" />
+		<item id="intro" href="frontmatter/intro.xhtml" media-type="application/xhtml+xml" />
+
+		<!-- the tutorials -->
+		<item id="lesson02" href="tutorial02/tutorial02.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+		<item id="lesson02-gl" href="tutorial02/tutorial02webgl.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+	</manifest>
+	<spine>
+		<itemref idref="coverpage" />
+		<itemref idref="toc" />
+		<itemref idref="preface" />
+		<itemref idref="intro" />
+		<itemref idref="lesson02" />
+		<itemref idref="lesson02-gl" properties="rendition:layout-pre-paginated"/>
+	</spine>
+</package>
