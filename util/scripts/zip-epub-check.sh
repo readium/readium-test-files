@@ -62,7 +62,7 @@ mv $ZIPNAME.zip $ZIPNAME.epub
 printg "-------- Zip of folder $FOLDER into $ZIPNAME complete -----------"
 ls -l $ZIPNAME.epub
 
-echo "${green}Checking EPUB '$ZIPNAME.epub' against epubcheck 4.0.0.${NC}"
+echo "${green}Checking EPUB '$ZIPNAME.epub' against epubcheck 4.0.1${NC}"
 
 java -cp $EPUBCHECKLIB -jar $EPUBCHECKJAR  $FOLDER/$ZIPNAME.epub
 
