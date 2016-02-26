@@ -1,6 +1,7 @@
 # Ignore
 *.epub
 *.jar
+temp/**/*
 
 # Allow
 !issue-files/**/*.epub
