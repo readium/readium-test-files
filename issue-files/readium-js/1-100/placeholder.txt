@@ -1,1 +1,0 @@
-This is simple a placeholder so git creates the folder
