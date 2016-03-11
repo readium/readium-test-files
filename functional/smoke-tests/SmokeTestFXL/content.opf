@@ -1,31 +1,37 @@
 <?xml version="1.0"?>
 <package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0" 
       prefix="rendition: http://www.idpf.org/vocab/rendition/#">
- <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
-      xmlns:dcterms="http://purl.org/dc/terms/"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:opf="http://www.idpf.org/2007/opf">
-   	<dc:title>Smoke Test FXL</dc:title> 
-   	<dc:creator>Ric Wright</dc:creator> 
-   	<dc:date>2014-02-27</dc:date>
-   	<dc:subject>Smoke Test</dc:subject>
-   	<dc:language>en</dc:language> 
-   	<dc:coverage>The Ether</dc:coverage> 
-   	<dc:rights>Public Domain</dc:rights> 
-   	<dc:publisher>Readium</dc:publisher> 
-   	<dc:identifier id="pub-id">urn:uuid:36d5078e-ff7d-468e-a5f3-f47c14b91f2f</dc:identifier>
-   	<meta property="dcterms:modified">2014-07-15T12:47:00Z</meta>
-   	<!--  layout metadata  -->
-	<meta property="rendition:layout">pre-paginated</meta>
-	<meta property="rendition:orientation">portrait</meta>
-	<meta property="rendition:spread">auto</meta> 
-	<!-- cover -->
-   	<meta name="cover" content="cover-image" />
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:opf="http://www.idpf.org/2007/opf">
+   	    <dc:title>Smoke Test FXL</dc:title>
+		<dc:creator id="creator1">Markus Gylling</dc:creator>
+		<dc:creator id="creator2">Vincent Gros</dc:creator>
+		<dc:creator id="creator3">Toshiaki Koike</dc:creator>
+		<dc:creator id="creator4">Marisa DeMeglio</dc:creator>
+		<dc:creator id="creator5">Matt Garrish</dc:creator>
+		<dc:creator id="creator6">Ori Idan</dc:creator>
+   	    <dc:creator>Ric Wright</dc:creator>
+   	    <dc:date>2014-02-27</dc:date>
+   	    <dc:subject>Smoke Test</dc:subject>
+   	    <dc:language>en</dc:language>
+   	    <dc:coverage>The Ether</dc:coverage>
+   	    <dc:rights>Public Domain</dc:rights>
+   	    <dc:publisher>Readium</dc:publisher>
+   	    <dc:identifier id="pub-id">urn:uuid:36d5078e-ff7d-468e-a5f3-f47c14b91f2f</dc:identifier>
+   	    <meta property="dcterms:modified">2016-03-11T12:12:16Z</meta>
+   	    <!--  layout metadata  -->
+	    <meta property="rendition:layout">pre-paginated</meta>
+	    <meta property="rendition:orientation">portrait</meta>
+	    <meta property="rendition:spread">auto</meta>
+	    <!-- cover -->
+   	    <meta name="cover" content="cover-image" />
    	
-   	<meta property="media:duration" refines="#smil-1">00:01:24.687</meta>
-    <meta property="media:duration" refines="#smil-10">00:01:29.369</meta>
-    <meta property="media:duration" refines="#smil-11">00:06:27.604</meta>
-    <meta property="media:duration">00:34:27.145</meta>
+   	    <meta property="media:duration" refines="#smil-1">00:01:24.687</meta>
+        <meta property="media:duration" refines="#smil-10">00:01:29.369</meta>
+        <meta property="media:duration" refines="#smil-11">00:06:27.604</meta>
+        <meta property="media:duration">00:34:27.145</meta>
     	
 </metadata>
  <manifest>
@@ -72,10 +78,10 @@
     <item id="smil-10" href="mo/skippability.smil" media-type="application/smil+xml"/>
     <item id="smil-11" href="mo/escapability.smil" media-type="application/smil+xml"/>
 	<!-- fonts -->
-	<item id="font-ttf" href="fonts/OldStandard-Regular.ttf" media-type="application/x-font-ttf"/>
-  <item id="sandome-ttf" href="fonts/sandome.ttf" media-type="application/x-font-ttf"/>
-  <item id="sandome-ttf-adb" href="fonts/sandome.adb.ttf" media-type="application/x-font-ttf"/>
-	<item id="sandome-ttf-obf" href="fonts/sandome.obf.ttf" media-type="application/x-font-ttf"/>
+	<item id="font-ttf" href="fonts/OldStandard-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+  <item id="sandome-ttf" href="fonts/sandome.ttf" media-type="application/vnd.ms-opentype"/>
+  <item id="sandome-ttf-adb" href="fonts/sandome.adb.ttf" media-type="application/vnd.ms-opentype"/>
+	<item id="sandome-ttf-obf" href="fonts/sandome.obf.ttf" media-type="application/vnd.ms-opentype"/>
 	<item id="zantroke" href="fonts/Zantroke.otf" media-type="application/vnd.ms-opentype"/>
 	<item id="zantroke-obf" href="fonts/Zantroke.obf.otf" media-type="application/vnd.ms-opentype"/>
 	<item id="zantroke-adb" href="fonts/Zantroke.adb.otf" media-type="application/vnd.ms-opentype"/>

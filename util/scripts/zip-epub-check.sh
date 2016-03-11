@@ -12,6 +12,7 @@ green='\033[0;32m'
 NC='\033[00m' # no color
 EPUBCHECKLIB='/Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/lib'
 EPUBCHECKJAR='/Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/epubcheck.4.0.1.jar'
+UPDATEMODTIMEJAR='/Users/rkwright/Documents/github/readium-test-files/util/scripts/UpdateModTime.jar'
 
 function printg {
 	printf "${green}"
@@ -50,7 +51,7 @@ rm $ZIPNAME.epub
 
 # update the mod time of the OPF file
 OPFFILE=$(find $FOLDER -name *.opf)
-java  -jar /Users/rkwright/Documents/github/readium-test-files/util/scripts/UpdateModTime.jar $OPFFILE
+java  -jar $UPDATEMODTIMEJAR $OPFFILE
 
 # start the zip with the uncompressed mimetype file, per spec
 zip -X -0 $ZIPNAME mimetype
