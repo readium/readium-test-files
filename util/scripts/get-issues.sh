@@ -23,16 +23,25 @@ fi
 # save the argument - the REPO name
 REPO=$1
 
-STATE="open"
+STATE="all"
 if [ $# -gt 2 ]
 then
     STATE=$3
 fi
-
-# see if the user asked to pipe the output to a file
+# remove the old file, if any
 if [ $# -ge 2 ]
 then
-   curl https://api.github.com/repos/$REPO/issues\?state\=$STATE > $2 
-else
-   curl https://api.github.com/repos/$REPO/issues\?state\=$STATE
+    rm -f $2
 fi
+
+# make 10 passes of 100 each - should be enough
+for i in `seq 1 10`;
+do
+    # see if the user asked to pipe the output to a file
+    if [ $# -ge 2 ]
+    then
+        curl https://api.github.com/repos/$REPO/issues\?state\=$STATE\&filter\=all\&page=$i\&per_page\=100 >> $2 
+    else
+        curl https://api.github.com/repos/$REPO/issues\?state\=$STATE
+    fi
+done
