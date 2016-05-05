@@ -38,10 +38,11 @@ fi
 for i in `seq 1 10`;
 do
     # see if the user asked to pipe the output to a file
+    # Note: github will only allow 60 API calls an hour unless authenticated.  So replace the -u parameter with -u "username:password" to get 5000/hour
     if [ $# -ge 2 ]
     then
-        curl https://api.github.com/repos/$REPO/issues\?state\=$STATE\&filter\=all\&page=$i\&per_page\=100 >> $2 
+        curl -u "rkwright" https://api.github.com/repos/$REPO/issues\?state\=$STATE\&filter\=all\&page=$i\&per_page\=100 >> $2 
     else
-        curl https://api.github.com/repos/$REPO/issues\?state\=$STATE
+        curl -u "rkwright" https://api.github.com/repos/$REPO/issues\?state\=$STATE
     fi
 done
