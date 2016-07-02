@@ -7,7 +7,6 @@
 #
 # @rkwright, February 2015
 #---------------------------------------------------
-# make sure the supplied a version
 red='\033[1;31m'
 green='\033[0;32m'
 NC='\033[00m' # no color
