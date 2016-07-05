@@ -122,6 +122,7 @@ curl --user "$USER:$PASS" --include --request POST --data '{"name":"status:WIP",
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"status:Duplicate","color":"cfe2f3"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"status:NotThisProduct","color":"cfe2f3"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"browser:ChromeExtension","color":"d0e0e3"}' "https://api.github.com/repos/$REPO/labels"
+curl --user "$USER:$PASS" --include --request POST --data '{"name":"browser:CloudReader","color":"d0e0e3"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"browser:Chrome","color":"d0e0e3"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"browser:Firefox","color":"d0e0e3"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"browser:Safari","color":"d0e0e3"}' "https://api.github.com/repos/$REPO/labels"
