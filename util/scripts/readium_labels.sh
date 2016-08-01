@@ -68,6 +68,7 @@ curl --user "$USER:$PASS" --include --request POST --data '{"name":"type:Questio
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"type:Discussion","color":"d9d2e9"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"type:Request","color":"d9d2e9"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"type:Task","color":"d9d2e9"}' "https://api.github.com/repos/$REPO/labels"
+curl --user "$USER:$PASS" --include --request POST --data '{"name":"type:Refactor","color":"d9d2e9"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"func:Packaging","color":"b6d7a8"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"func:Encryption","color":"b6d7a8"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"func:Metadata","color":"b6d7a8"}' "https://api.github.com/repos/$REPO/labels"
