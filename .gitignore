@@ -2,6 +2,5 @@
 *.epub
 *.jar
 temp/**/*
-
-# Allow
-!issue-files/**/*.epub
+**/.idea/workspace.xml
+**/.idea/tasks.xml
