@@ -54,7 +54,7 @@ if [ $# -lt 2 ]
   then
     printr "No repo and/or branch tag supplied!  Exiting..."
     printr "Usage: ./readium_clone.sh <repo-name> <branch> [<repo-suffix>]"
-    printr "To clone master: ./readium_clone.sh <repo-name> master [<repo-suffix>]"
+    printr "To clone master: readium_clone.sh <repo-name> master [<repo-suffix>]"
     exit 1
 fi
 

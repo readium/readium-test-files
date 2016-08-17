@@ -42,6 +42,7 @@ function init_subrepo {
 
     git submodule update --init --recursive
     git submodule foreach --recursive "git checkout $BRANCH"
+    git submodule foreach --recursive "git pull"
 
    printg "Completed updating submodules in branch '$BRANCH'"
 }
