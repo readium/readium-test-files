@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+ <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:opf="http://www.idpf.org/2007/opf">
+   	<dc:title>Tiny SVG</dc:title> 
+   	<dc:creator>Ric Wright</dc:creator> 
+   	<dc:date>2014-04-10</dc:date>
+   	<dc:subject>testfile</dc:subject>
+   	<dc:language>en</dc:language> 
+   	<dc:coverage>The Ether</dc:coverage> 
+   	<dc:rights>Public Domain</dc:rights> 
+   	<dc:publisher>Readium</dc:publisher> 
+   	<dc:identifier id="pub-id">urn:uuid:22d7bf40-9bf8-41f7-af53-a9752cb3f5e0</dc:identifier>
+   	<meta property="dcterms:modified">2016-08-22T08:56:55Z</meta>
+   	<meta name="cover" content="coverpage"  /> 
+   	<meta property="rendition:layout">pre-paginated</meta>
+ </metadata>
+ <manifest>
+ 	<!--  cover image -->
+  	<item id="coverpage" href="svg/coverpage.svg" media-type="image/svg+xml" properties="cover-image"/>
+  	<!-- navigation -->
+  	<item id="nav" href="xhtml/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+  	<!-- titlepage -->
+ 	<item id="titlepage" href="xhtml/titlepage.xhtml" media-type="application/xhtml+xml"/>
+ 	<!--  body pages -->
+  	<item id="chapter01" href="xhtml/chapter01.xhtml" media-type="application/xhtml+xml"  properties="svg"/>
+  	<item id="chapter02" href="svg/chapter02.svg" media-type="image/svg+xml"/>
+  	<item id="chapter03" href="svg/chapter03.svg" media-type="image/svg+xml"/>
+  	<item id="chapter04" href="xhtml/chapter04.xhtml" media-type="application/xhtml+xml"  properties="svg"/>
+  	<item id="chapter05" href="svg/chapter05.svg" media-type="image/svg+xml"/>
+  	<!-- images -->
+  	<item id="epub_logo" href="images/epub_logo.jpeg" media-type="image/jpeg"/>
+ 	<!-- SVG -->
+  	<item id="CheshireCat" href="svg/CheshireCat.svg" media-type="image/svg+xml"/>
+ 	<item id="Viewbox" href="svg/ViewBox.svg" media-type="image/svg+xml"/>
+    	<!-- CSS -->
+  	<item id="css" href="styles/style.css" media-type="text/css"/>
+  	<item id="svg-css" href="styles/svg-style.css" media-type="text/css"/>
+  	
+  </manifest>
+ <spine>
+  	<itemref idref="titlepage"/>
+  	<itemref idref="nav"/>
+  	<itemref idref="chapter01"/>
+  	<itemref idref="chapter02"/>
+  	<itemref idref="chapter03"/>
+  	<itemref idref="chapter04"/>
+  	<itemref idref="chapter05"/>
+  	<itemref idref="Viewbox"/>
+   </spine>
+</package>
