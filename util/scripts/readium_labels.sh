@@ -61,6 +61,7 @@ curl --user "$USER:$PASS" --include --request POST --data '{"name":"priority:Hig
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"priority:Medium","color":"ffb4b4"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"priority:Low","color":"ffd0d0"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"priority:NeverFix","color":"fff2cc"}' "https://api.github.com/repos/$REPO/labels"
+curl --user "$USER:$PASS" --include --request POST --data '{"name":"priority:N/A","color":"fff2cc"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"type:Bug","color":"674ea7"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"type:Enhancement","color":"d9d2e9"}' "https://api.github.com/repos/$REPO/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"type:Feature","color":"d9d2e9"}' "https://api.github.com/repos/$REPO/labels"
