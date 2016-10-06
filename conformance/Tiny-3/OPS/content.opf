@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package xmlns="http://www.idpf.org/2007/opf" _unique-identifier="pub-id" version="3.0" >
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0" >
 	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" >
    		<dc:title>Tiny EPUB 3</dc:title> 
    		<dc:creator>Ric Wright</dc:creator> 
@@ -9,21 +9,21 @@
    		<dc:coverage>The Ether</dc:coverage> 
    		<dc:rights>Public Domain</dc:rights> 
    		<dc:publisher>Readium</dc:publisher> 
-   		<dc:dentifier id="pub-id">urn:uuid:bdcce675-7f93-40e9-a1de-1682502fa270</dc:dentifier>
-   		<meta property="dcterms:modified">2016-08-19T10:46:18Z</meta>
+   		<dc:identifier id="pub-id">urn:uuid:bdcce675-7f93-40e9-a1de-1682502fa270</dc:identifier>
+   		<meta property="dcterms:modified">2016-09-20T14:02:50Z</meta>
    		<meta name="cover" content="cover-image" />
  	</metadata>
  	<manifest>
   		<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
   		<item id="css" href="style.css" media-type="text/css"/>
-  		<item id="titlepage" href="titlepage.xhtml" media-type="application/xhtml+xml"/>
+  		<item id="titlepage" href="titlepage.xhtml" media-type="application/xhtml+xml" properties="svg"/>
   		<item id="chapter01" href="chapter01.xhtml" media-type="application/xhtml+xml"/>
   		<item id="chapter02" href="chapter02.xhtml" media-type="application/xhtml+xml"/>
   		<item id="epub_logo" href="images/epub_logo.jpeg" media-type="image/jpeg" properties="cover-image"/>
  	</manifest>
  	<spine>
-  		<itemref idref="nav" />
   		<itemref idref="titlepage"/>
+  		<itemref idref="nav" />
   		<itemref idref="chapter01"/>
   		<itemref idref="chapter02"/>
  	</spine>
