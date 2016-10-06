@@ -13,7 +13,7 @@
    	<dc:rights>Public Domain</dc:rights> 
    	<dc:publisher>Readium</dc:publisher> 
    	<dc:identifier id="pub-id">urn:uuid:22d7bf40-9bf8-41f7-af53-a9752cb3f5e0</dc:identifier>
-   	<meta property="dcterms:modified">2016-08-22T08:56:55Z</meta>
+   	<meta property="dcterms:modified">2016-09-20T13:53:43Z</meta>
    	<meta name="cover" content="coverpage"  /> 
    	<meta property="rendition:layout">pre-paginated</meta>
  </metadata>
@@ -23,7 +23,7 @@
   	<!-- navigation -->
   	<item id="nav" href="xhtml/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
   	<!-- titlepage -->
- 	<item id="titlepage" href="xhtml/titlepage.xhtml" media-type="application/xhtml+xml"/>
+ 	<item id="titlepage" href="xhtml/titlepage.xhtml" media-type="application/xhtml+xml" properties="svg"/>
  	<!--  body pages -->
   	<item id="chapter01" href="xhtml/chapter01.xhtml" media-type="application/xhtml+xml"  properties="svg"/>
   	<item id="chapter02" href="svg/chapter02.svg" media-type="image/svg+xml"/>
