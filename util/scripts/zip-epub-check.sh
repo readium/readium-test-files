@@ -57,7 +57,7 @@ java  -jar $UPDATEMODTIMEJAR $OPFFILE
 zip -X -0 $ZIPNAME mimetype
 
 # the zip all the rest, excluding the junk (.idea folder, .DS_Store, etc.)
-zip -X -x "*/.idea/*" "*/.DS_Store" "*.epub" "non-epub/*" -r -u $ZIPNAME ./*
+zip -X -x "*/.idea/*" "*/.DS_Store" "*.epub" "non-epub/*" "*.md" -r -u $ZIPNAME ./*
 mv $ZIPNAME.zip $ZIPNAME.epub
 
 printg "-------- Zip of folder $FOLDER into $ZIPNAME complete -----------"
