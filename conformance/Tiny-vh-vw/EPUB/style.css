@@ -1,0 +1,138 @@
+html, body {
+	height:100%;
+	width:100%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	border-width:0;
+}
+div {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+p {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+div.pageContainer {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	position:relative;
+	height:100%;
+	width:100%;
+	border: 1px solid blue;
+}
+div.pageMarginLeftContainer {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height:90%;
+	width:10%;
+	position: relative;
+	float: left;
+	border: 1px solid red;
+}
+div.pageMarginRightContainer {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height:90%;
+	/*should be width:10%; but
+    pixelated borders change the fit.
+    when borders go then everything
+    fits exactly by percent*/
+	width:8%;
+	position: relative;
+	float: right;
+	border: 1px solid red;
+}
+div.pageLeftNumberContainer {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height:10%;
+	width:10%;
+	position: absolute;
+	top: 90%;
+	left: 0%;
+	border: 1px solid green;
+}
+div.pageRightNumberContainer {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height:10%;
+	width:10%;
+	position: absolute;
+	top: 90%;
+	left: 90%;
+	border: 1px solid green;
+}
+div.pageHeaderContainer {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height:10%;
+	width:80%;
+	position: relative;
+	float: left;
+	border: 1px solid black;
+}
+div.pageFooterContainer {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height:10%;
+	width:80%;
+	position: absolute;
+	bottom:0%;
+	left:10%;
+	border: 1px solid black;
+}
+div.pageContentContainer {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height:100%;
+	width:80%;
+	position: relative;
+	float: left;
+	border: 1px solid yellow;
+}
+p.running-headers {
+	font-size: 3vw;
+	text-align: right;
+	line-height: 0;
+	position:relative;
+	top:50%;
+}
+p.running-footers {
+	font-size: 3vw;
+	text-align: center;
+	line-height: 0;
+	position:relative;
+	top:50%;
+}
+p.page-numbers {
+	color:#000000;
+	font-family:"Times New Roman", serif;
+	font-size:3.3vw;
+	font-style:normal;
+	font-weight:bold;
+	text-align: center;
+	line-height: 0;
+	position: relative;
+	top: 50%;
+}
+p.title-text {
+	color:#000000;
+	font-family:"Times New Roman", serif;
+	font-size:3vw;
+	line-height: 3vw;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-style:normal;
+	font-weight:normal;
+}
+p.main-p {
+	color:#000000;
+	font-family:"Times New Roman", serif;
+	font-size:3.7vw;
+	line-height: 3vw;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-style:normal;
+	font-weight:normal;
+}
