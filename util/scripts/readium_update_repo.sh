@@ -32,7 +32,8 @@ function update_repo {
    
  	echo_pwd
  	git checkout $BRANCH
-
+    git pull
+    
     init_subrepo
 }
 
