@@ -11,7 +11,7 @@ red='\033[1;31m'
 green='\033[0;32m'
 NC='\033[00m' # no color
 EPUBCHECKLIB='/Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/lib'
-EPUBCHECKJAR='/Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/epubcheck.4.0.1.jar'
+EPUBCHECKJAR='/Users/rkwright/Documents/github/readium-test-files/util/scripts/epubcheck/epubcheck.4.0.3.jar'
 UPDATEMODTIMEJAR='/Users/rkwright/Documents/github/readium-test-files/util/scripts/UpdateModTime.jar'
 
 function printg {
@@ -63,7 +63,7 @@ mv $ZIPNAME.zip $ZIPNAME.epub
 printg "-------- Zip of folder $FOLDER into $ZIPNAME complete -----------"
 ls -l $ZIPNAME.epub
 
-echo "${green}Checking EPUB '$ZIPNAME.epub' against epubcheck 4.0.1${NC}"
+echo "${green}Checking EPUB '$ZIPNAME.epub' against epubcheck 4.0.3${NC}"
 
 java -cp $EPUBCHECKLIB -jar $EPUBCHECKJAR  $FOLDER/$ZIPNAME.epub
 
