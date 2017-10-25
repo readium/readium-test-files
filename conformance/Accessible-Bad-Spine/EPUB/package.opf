@@ -9,7 +9,7 @@
 		<meta property="dcterms:title" id="meta-title">Accessible EPUB 3</meta>
 		<dc:language id="pub-language">en</dc:language>
 		<meta property="dcterms:language" id="meta-language">en</meta>
-		<meta property="dcterms:modified">2016-09-23T12:32:14Z</meta>
+		<meta property="dcterms:modified">2017-04-04T11:18:51Z</meta>
 		<!--The preceding date value is actually local time (not UTC) in UTC format because there is no function in XSLT 1.0 to generate a correct UTC time-->
 		<meta property="dcterms:contributor">O’Reilly Production Services</meta>
 		<dc:contributor>O’Reilly Production Services</dc:contributor>
