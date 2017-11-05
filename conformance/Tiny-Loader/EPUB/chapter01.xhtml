@@ -13,6 +13,7 @@
 <script type="text/javascript"> <![CDATA[
 // Globals (used in the animation callback)
 var scene;
+var renderer;
 var camera;
 var xRotation = 0.0;
 var yRotation = 0.0;
@@ -54,32 +55,62 @@ function initializeScene(){
     camera.lookAt(scene.position);
     scene.add(camera);
 
-    var cubeGeometry = new THREE.BoxGeometry(2.0, 2.0, 2.0);
+    /*
+    var material = new THREE.MeshBasicMaterial({ color:"#0000ff" });
+    var geometry = new THREE.BoxGeometry(1.0, 1.0, 1.0);
+    var mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(2.0, 0.0, 2.0);
+    scene.add(mesh);
+    */
 
     // Load an image as texture
+    loadTexture();
+}
+
+function oldLoadTexture() {
     var neheTexture = THREE.ImageUtils.loadTexture("images/NeHe.jpg");
 
-    var cubeMaterial = new THREE.MeshBasicMaterial({
+    var cubeMaterial = new THREE.MeshLambertMaterial({
         map:neheTexture,
         side:THREE.DoubleSide
     });
+
+    var cubeGeometry = new THREE.BoxGeometry(2.0, 2.0, 2.0);
 
     cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
     cubeMesh.position.set(0.0, 0.0, 4.0);
     scene.add(cubeMesh);
 }
 
+function loadTexture () {
+    var loader = new THREE.TextureLoader();
+
+    loader.load( 'images/NeHe.jpg', function ( texture ) {
+        var cubeMaterial = new THREE.MeshBasicMaterial({
+            map:texture,
+            side:THREE.DoubleSide
+        });
+
+        var cubeGeometry = new THREE.BoxGeometry(2.0, 2.0, 2.0);
+
+        cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
+        cubeMesh.position.set(0.0, 0.0, 4.0);
+        scene.add(cubeMesh);
+    });
+}
+
 /**
  * Animate the scene and call rendering.
  */
-function animateScene(){
+function animateScene() {
 
-    // Increase the x, y and z rotation of the cube
-    xRotation += 0.03;
-    yRotation += 0.02;
-    zRotation += 0.04;
-    cubeMesh.rotation.set(xRotation, yRotation, zRotation);
-
+    if (cubeMesh !== undefined) {
+        // Increase the x, y and z rotation of the cube
+        xRotation += 0.03;
+        yRotation += 0.02;
+        zRotation += 0.04;
+        cubeMesh.rotation.set(xRotation, yRotation, zRotation);
+    }
     // Define the function which is called by the browser supported timer loop.
     requestAnimationFrame(animateScene);
 
