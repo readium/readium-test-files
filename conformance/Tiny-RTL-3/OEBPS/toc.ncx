@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd" -->
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+	<head>
+		<meta name="dtb:uid" content="urn:uuid:8463909E-0CA2-43F2-A7D4-1DEF2527475D" />
+		<meta name="dtb:depth" content="2" />
+		<meta name="dtb:totalPageCount" content="0" />
+		<meta name="dtb:maxPageNumber" content="0" />
+	</head>
+	<docTitle>
+		<text>オオカバマダラ Vertical</text>
+	</docTitle>
+	<docAuthor>
+		<text>Wikipedia</text>
+	</docAuthor>
+	<navMap>
+		<navPoint id="navpoint1" playOrder="1">
+			<navLabel>
+				<text>オオカバマダラ</text>
+			</navLabel>
+			<content src="Monarchjp2-1.xhtml#toc_marker-1" />
+			<navPoint id="navpoint2" playOrder="2">
+				<navLabel>
+					<text>特徴</text>
+				</navLabel>
+				<content src="Monarchjp2-2.xhtml#toc_marker-1-1" />
+			</navPoint>
+		</navPoint>
+	</navMap>
+</ncx>

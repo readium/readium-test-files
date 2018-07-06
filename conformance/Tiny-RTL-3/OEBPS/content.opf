@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0" xml:lang="jp">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<meta name="generator" content="Adobe InDesign" />
+		<meta name="cover" content="x203.png" />
+		<dc:title>オオカバマダラ 24bis6</dc:title>
+		<dc:creator>Wikipedia</dc:creator>
+		<dc:date>2012-06-26</dc:date>
+		<dc:language>jp</dc:language>
+		<meta property="dcterms:modified">2018-07-06T11:01:37Z</meta>
+		<dc:identifier id="bookid">urn:uuid:8463909E-0CA2-43F2-A7D4-1DEF2527475D</dc:identifier>
+	</metadata>
+	<manifest>
+		<!-- content -->
+		<item id="Monarchjp2" href="Monarchjp2.xhtml" media-type="application/xhtml+xml" />
+		<item id="Monarchjp2-1" href="Monarchjp2-1.xhtml" media-type="application/xhtml+xml" />
+		<item id="Monarchjp2-2" href="Monarchjp2-2.xhtml" media-type="application/xhtml+xml" />
+		<item id="Monarchjp2-3" href="Monarchjp2-3.xhtml" media-type="application/xhtml+xml" />
+		<!-- frontmatter -->
+		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+		<item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav" />
+		<!-- images -->
+		<item id="butterfly1958.css" href="css/butterfly1958.css" media-type="text/css" />
+		<item id="extra11.css" href="css/extra11.css" media-type="text/css" />
+		<item id="x203.png" href="image/203.png" media-type="image/png" />
+		<item id="caterpillars_fmt.png" href="image/caterpillars_fmt.png" media-type="image/png" />
+		<item id="chrysalis_fmt.jpeg" href="image/chrysalis_fmt.jpeg" media-type="image/jpeg" />
+		<item id="hatching_fmt.jpeg" href="image/hatching_fmt.jpeg" media-type="image/jpeg" />
+		<item id="onclover2_fmt.jpeg" href="image/onclover2_fmt.jpeg" media-type="image/jpeg" />
+		<item id="swarm_fmt.png" href="image/swarm_fmt.png" media-type="image/png" />
+	</manifest>
+	<spine page-progression-direction="rtl" toc="ncx">
+		<itemref idref="Monarchjp2" />
+		<itemref idref="Monarchjp2-1" />
+		<itemref idref="Monarchjp2-2" />
+		<itemref idref="Monarchjp2-3" />
+	</spine>
+</package>

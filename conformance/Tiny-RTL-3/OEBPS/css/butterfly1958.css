@@ -1,0 +1,159 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+td, th {
+	border-style:solid;
+	border-width:1px;
+}
+table {
+	border-collapse:collapse;
+}
+li {
+	display:block;
+}
+body {
+	-epub-hyphens:auto;
+	-webkit-hyphens:auto;
+}
+@page {
+	margin : 0px 0px 0px 0px;
+}
+p.Normal {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Sazanami Mincho", serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.Header {
+	-epub-ruby-position:over;
+	break-before:page;
+	color:#000000;
+	font-family:"Sazanami Mincho", serif;
+	font-size:3em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.Header2 {
+	-epub-ruby-position:over;
+	break-before:page;
+	color:#000000;
+	font-family:"Sazanami Mincho", serif;
+	font-size:2em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.caption {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Sazanami Gothic", sans-serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.2;
+	margin-bottom:24px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.illustration {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Sazanami Mincho", serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.List {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Sazanami Mincho", serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.2;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.copyright {
+	-epub-ruby-position:over;
+	color:#000000;
+	font-family:"Sazanami Mincho", serif;
+	font-size:0.667em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.2;
+	margin-bottom:12px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0px;
+}
+span.Link {
+	color:#25408f;
+}
+img.frame-1 {
+	height:591px;
+	width:309px;
+}
+img.frame-2 {
+	height:217px;
+	width:324px;
+}
+img.frame-3 {
+	height:273px;
+	width:430px;
+}
+img.frame-4 {
+	height:180px;
+	width:250px;
+}
+img.frame-5 {
+	height:224px;
+	width:354px;
+}
