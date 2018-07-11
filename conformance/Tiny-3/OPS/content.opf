@@ -10,7 +10,7 @@
    		<dc:rights>Public Domain</dc:rights> 
    		<dc:publisher>Readium</dc:publisher> 
    		<dc:identifier id="pub-id">urn:uuid:bdcce675-7f93-40e9-a1de-1682502fa270</dc:identifier>
-   		<meta property="dcterms:modified">2016-09-20T14:02:50Z</meta>
+   		<meta property="dcterms:modified">2017-11-16T11:54:04Z</meta>
    		<meta name="cover" content="cover-image" />
  	</metadata>
  	<manifest>
