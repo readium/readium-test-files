@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0" 
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="2.0"
       prefix="rendition: http://www.idpf.org/vocab/rendition/#">
  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
       xmlns:dcterms="http://purl.org/dc/terms/"
@@ -14,7 +14,7 @@
    	<dc:rights>Public Domain</dc:rights> 
    	<dc:publisher>Readium</dc:publisher> 
    	<dc:identifier id="pub-id">com.github.readium.smoketest.fxl.rtl</dc:identifier>
-   	<meta property="dcterms:modified">2014-07-30T12:47:00Z</meta>
+   	<meta property="dcterms:modified">2018-07-06T09:40:33Z</meta>
    	<!--  layout metadata  -->
 	<meta property="rendition:layout">pre-paginated</meta>
 	<meta property="rendition:orientation">portrait</meta>
