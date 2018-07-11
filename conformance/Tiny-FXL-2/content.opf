@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="2.0"
+      prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+ <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:opf="http://www.idpf.org/2007/opf">
+   	<dc:title>Tiny FXL</dc:title> 
+   	<dc:creator>Ric Wright</dc:creator> 
+   	<dc:date>2014-02-27</dc:date>
+   	<dc:subject>testfile</dc:subject>
+   	<dc:language>en</dc:language> 
+   	<dc:coverage>The Ether</dc:coverage> 
+   	<dc:rights>Public Domain</dc:rights> 
+   	<dc:publisher>Readium</dc:publisher> 
+   	<dc:identifier id="pub-id">urn:uuid:bdcce675-7f93-40e9-a1de-1682502fa270</dc:identifier>
+   	<meta property="dcterms:modified">2018-07-06T09:30:12Z</meta>
+   	<!--  layout metadata  -->
+	<meta property="rendition:layout">pre-paginated</meta>
+	<meta property="rendition:orientation">portrait</meta>
+	<meta property="rendition:spread">auto</meta> 
+	<!-- cover -->
+   	<meta name="cover" content="cover-image" />
+	
+</metadata>
+ <manifest>
+    <!-- images -->
+    <item id="epub_logo" href="images/epub_logo.jpeg" media-type="image/jpeg" properties="cover-image"/>
+    <!-- frontmatter -->
+    <item id="nav" href="frontmatter/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="titlepage" href="frontmatter/titlepage.xhtml" media-type="application/xhtml+xml"/>
+    <!-- css -->
+    <item id="css" href="css/style.css" media-type="text/css"/>
+    <item id="fixed-css" href="css/fixed.css" media-type="text/css"/>
+    <!-- bodymatter -->
+    <item id="chapter01" href="xhtml/chapter01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter02" href="xhtml/chapter02.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter03" href="xhtml/chapter03.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter04" href="xhtml/chapter04.xhtml" media-type="application/xhtml+xml"/>
+ </manifest>
+ <spine>
+    <itemref idref="titlepage"/>
+    <itemref idref="chapter01"/>
+    <itemref idref="chapter02"/>
+    <itemref idref="chapter03"/>
+    <itemref idref="chapter04"/>
+ </spine>
+</package>

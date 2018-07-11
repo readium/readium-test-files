@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0" 
+      prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+ 	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:opf="http://www.idpf.org/2007/opf">
+   		<dc:title>Tiny FXL RTL</dc:title> 
+   		<dc:creator>Ric Wright</dc:creator> 
+   		<dc:date>2014-08-27</dc:date>
+   		<dc:subject>testfile</dc:subject>
+   		<dc:language>en</dc:language> 
+   		<dc:coverage>The Ether</dc:coverage> 
+   		<dc:rights>Public Domain</dc:rights> 
+   		<dc:publisher>Readium</dc:publisher> 
+   		<dc:identifier id="pub-id">urn:uuid:9fa511e8-84c0-4c60-80a9-5217c6e4d3dc</dc:identifier>
+   		<meta property="dcterms:modified">2014-08-27T12:47:00Z</meta>
+   		<!--  layout metadata  -->
+		<meta property="rendition:layout">pre-paginated</meta>
+		<meta property="rendition:orientation">portrait</meta>
+		<meta property="rendition:spread">auto</meta> 
+		<!-- cover -->
+   		<meta name="cover" content="cover-image" />
+	</metadata>
+ 	<manifest>
+  		<item id="epub_logo" href="images/epub_logo.jpeg" media-type="image/jpeg" properties="cover-image"/>
+  		<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+  		<item id="css" href="css/style.css" media-type="text/css"/>
+  		<item id="fixed-css" href="css/fixed.css" media-type="text/css"/>
+  		<item id="titlepage" href="titlepage.xhtml" media-type="application/xhtml+xml"/>
+  		<item id="chapter01" href="chapter01.xhtml" media-type="application/xhtml+xml"/>
+  		<item id="chapter02" href="chapter02.xhtml" media-type="application/xhtml+xml"/>
+  		<item id="chapter03" href="chapter03.xhtml" media-type="application/xhtml+xml"/>
+  		<item id="chapter04" href="chapter04.xhtml" media-type="application/xhtml+xml"/>
+ 	</manifest>
+ 	<spine page-progression-direction="rtl">
+  		<itemref idref="titlepage"/>
+  		<itemref idref="chapter01"/>
+  		<itemref idref="chapter02"/>
+  		<itemref idref="chapter03"/>
+  		<itemref idref="chapter04"/>
+ 	</spine>
+</package>
