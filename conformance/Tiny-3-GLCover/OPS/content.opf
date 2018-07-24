@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0" >
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" >
+   		<dc:title>Tiny EPUB 3 - GL Cover</dc:title>
+   		<dc:creator>Ric Wright</dc:creator> 
+   		<dc:date>2018-07-23</dc:date>
+   		<dc:subject>testfile</dc:subject>
+   		<dc:language>en-us</dc:language> 
+   		<dc:coverage>The Ether</dc:coverage> 
+   		<dc:rights>Public Domain</dc:rights> 
+   		<dc:publisher>Readium</dc:publisher> 
+   		<dc:identifier id="pub-id">urn:uuid:bdcce675-7f93-40e9-a1de-1682502fa270</dc:identifier>
+   		<meta property="dcterms:modified">2018-07-24T11:06:24Z</meta>
+   		<meta name="cover" content="cover-image" />
+ 	</metadata>
+ 	<manifest>
+		<!-- scripts -->
+		<item id="detector" href="three-js/Detector.js" media-type="text/javascript"/>
+		<item id="threejs" href="three-js/three.js" media-type="text/javascript"/>
+        <item id="OrbitControls-Touch-Ortho" href="gfx/OrbitControls-Touch-Ortho.js" media-type="text/javascript"/>
+        <item id="gfxScene" href="gfx/gfx-scene.js" media-type="text/javascript"/>
+        <item id="Stats" href="three-js/stats.js" media-type="text/javascript"/>
+
+        <!-- css -->
+        <item id="css" href="css/style.css" media-type="text/css"/>
+        <item id="epub_logo" href="images/epub_logo.jpeg" media-type="image/jpeg" />
+
+        <!-- front matter -->
+        <item id="titlepage" href="xhtml/titlepage.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+		<item id="nav" href="xhtml/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+
+        <!-- xhtml content -->
+  		<item id="chapter01" href="xhtml/chapter01.xhtml" media-type="application/xhtml+xml"/>
+ 	</manifest>
+ 	<spine>
+  		<itemref idref="titlepage"/>
+  		<itemref idref="nav" />
+  		<itemref idref="chapter01"/>
+ 	</spine>
+</package>
