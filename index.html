@@ -1,25 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+<title>Readium Testing Resources</title>
+<style>
+	td { padding: 5 };
+	table, th, td { border: 1px solid rgb(220,220,220); }
+</style>
+</head>
+
+<body>
 <h1>Readium Project Resource Files</h1>
 <p>&nbsp;</p>
-<h2>Revised EPUB TestSuite Fixed-Layout Files</h2>
-<p>The following files have been cloned from the BISG EPUB Test Suite. They have been modified to add two enhancements:</p>
+<h2>Revised EPUB Fixed-Layout Test Suite Files</h2>
+<p>The following files have been cloned from the IDPF EPUB Test Suite. They have been modified to add two enhancements:</p>
 <ul>
-  <li>some Latin verbiage to fill the page up (the origiinal is just a blank page</li>
+  <li>some Latin verbiage to fill the page up (the original is just a blank page</li>
   <li>fixed-CSS lines to outline the margins of the page</li>
 </ul>
-<p>Note that the CSS is, strictly speaking, not compliant with the EPUB 3.0.1 spec since it uses the CSS &quot;fixed&quot; poisition property. It is hoped we will correct this error (making fixed illegal) in EPUB 3.2.</p>
-<p>The sources for the test files can be found <a href="functional/Revised-TS-FXL" target="_blank">here.</a></p>
-<ul>
-  <li><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0201.epub">EPUBTEST 0201 - FXL Support Tests:</a> Tests for fixed layout support</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0202-20160116.epub">EPUBTEST 0202 - FXL Spreads (both) Tests:</a> Tests for synthetic spreads in both device modes</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0203-20160116.epub">EPUBTEST 0203 - FXL Spreads (landscape) Tests:</a> Tests for synthetic spreads in landscape mode</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0204-20160116.epub">EPUBTEST 0204 - FXL Spreads (none) Tests:</a> Tests for synthetic spreads disabled</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0205-20160116.epub">EPUBTEST 0205 - FXL Spreads (portait) Tests:</a> Tests for synthetic spreads in portrait mode</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0206-20160116.epub">EPUBTEST 0206 - FXL Landscape Orientation Tests:</a> Tests for landscape orientation</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0207-20160116.epub">EPUBTEST 0207 - FXL Portrait Orientation Tests:</a> Tests for portrait orientation</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0208-20160116.epub">EPUBTEST 0208 - FXL Layout Override (reflowable) Tests:</a> Tests for spine overrides of rendition:layout property</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0209-20160116.epub">EPUBTEST 0209 - FXL Layout Override (pre-paginated) Tests:</a> Tests for spine overrides of rendition:layout property</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0210-20160116.epub">EPUBTEST 0210 - FXL Orientation Spine Override Tests:</a> Tests for spine overrides of rendition:orientation property</li>
-  <li><a href="http://epubtest.org/epubs/epub30-test-0211-20160116.epub">EPUBTEST 0211 - FXL Page Progression Direction Tests:</a> Tests for fixed layout page progression direction</li>
-</ul>
-<br>
-<p>&nbsp;</p>
+<p>Note that the CSS is, strictly speaking, not compliant with the EPUB 3.0.1 spec since it uses the CSS &quot;fixed&quot; poisition property. It is hoped we will correct this error (by making fixed legal) in EPUB 3.2, at which point these files can be pushed back into the IDPF repo.</p>
+<p>The sources for the test files can be found <a href="https://github.com/readium/readium-test-files/tree/master/functional/Revised-TS-FXL" target="_blank">here.</a></p>
+
+<table width="720" border="1" cellspacing="0" >
+  <tbody>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0201.epub">EPUBTEST 0201 - FXL Support Tests</a></td>
+      <td>Fixed layout support</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0202.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Synthetic spreads in both device modes</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0203.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Synthetic spreads in landscape mode</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0204.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Synthetic spreads disabled</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0205.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Synthetic spreads disabled</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0206.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Synthetic spreads disabled</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0207.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Landscape orientation</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0208.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Portrait orientation</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0209.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Spine overrides of rendition:layout property</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0210.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Spine overrides of rendition:orientation property</td>
+    </tr>
+    <tr>
+      <td><a href="http://readium.github.io/readium-test-files/functional/Revised-TS-FXL/epub30-test-0211.epub">EPUBTEST 0202 - FXL Spreads (both) Tests</a></td>
+      <td>Fixed layout page progression direction</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
