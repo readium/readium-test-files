@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0" >
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" >
+   		<dc:title>Tiny EPUB MathML</dc:title>
+   		<dc:creator>Ric Wright</dc:creator> 
+   		<dc:date>2014-08-15</dc:date>
+   		<dc:subject>testfile</dc:subject>
+   		<dc:language>en-us</dc:language> 
+   		<dc:coverage>The Ether</dc:coverage> 
+   		<dc:rights>Public Domain</dc:rights> 
+   		<dc:publisher>Readium</dc:publisher> 
+   		<dc:identifier id="pub-id">urn:uuid:bdcce675-7f93-40e9-a1de-1682502fa270</dc:identifier>
+   		<meta property="dcterms:modified">2018-08-15T12:18:00Z</meta>
+   		<meta name="cover" content="cover-image" />
+ 	</metadata>
+ 	<manifest>
+        <!-- css -->
+        <item id="css" href="css/style.css" media-type="text/css"/>
+        <item id="mathml-css" href="css/math.css" media-type="text/css"/>
+        <item id="base-css" href="css/base.css" media-type="text/css"/>
+        <!-- images -->
+        <item id="mathml_logo" href="images/MathML.png" media-type="image/png" properties="cover-image"/>
+        <item id="mathml-001" href="images/mathml-01-010-basic_rendering.png" media-type="image/png" />
+        <item id="mathml-002" href="images/mathml-01-020-styling.png" media-type="image/png" />
+        <item id="mathml-003" href="images/mathml-01-030-surds.png" media-type="image/png" />
+        <item id="mathml-004" href="images/mathml-01-040-vertical_stretch.png" media-type="image/png"/>
+        <item id="mathml-005" href="images/mathml-01-050-horizontal_stretch.png" media-type="image/png"/>
+        <item id="mathml-006" href="images/mathml-01-060-mtable_1.png" media-type="image/png" />
+        <item id="mathml-0061" href="images/mathml-01-061-mtable_2.png" media-type="image/png"/>
+        <item id="mathml-007" href="images/mathml-01-070-bidi_arabic.png" media-type="image/png"/>
+        <item id="mathml-008" href="images/mathml-01-080-mlongdiv.png" media-type="image/png"/>
+        <item id="mathml-0081" href="images/mathml-01-081-mstack.png" media-type="image/png"/>
+        <item id="mathml-009" href="images/mathml-01-090-mmultiscripts.png" media-type="image/png"/>
+		<!-- front matter -->
+  		<item id="nav" href="xhtml/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+        <item id="titlepage" href="xhtml/titlepage.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  		<!-- content -->
+        <item id="content-01" href="xhtml/content-mathml-001.xhtml" media-type="application/xhtml+xml" properties="mathml"/>
+ 	</manifest>
+ 	<spine>
+  		<itemref idref="titlepage"/>
+  		<itemref idref="nav" />
+  		<itemref idref="content-01"/>
+ 	</spine>
+</package>

@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.basic {
+        border: 1px dashed rgb(190,0,0);
+        background-color: rgb(255,255,224);
+        padding: 0.2em;
+}
+
+.basic .test1 {
+  font-size: 150%;
+}
+
+.basic .test2 {
+    background-color: green;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
